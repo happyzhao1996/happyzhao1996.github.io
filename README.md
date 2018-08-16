@@ -1,27 +1,37 @@
-# NexT主题
+## Welcome to GitHub Pages
 
-> 精于心，简于形
+You can use the [editor on GitHub](https://github.com/happyzhao1996/happyzhao1996.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-NexT 是由 [Hexo NexT](https://github.com/iissnan/hexo-theme-next) 移植而来的 Jekyll 主题。<!--commit: f951075d9b739d26b42472431995fa68d08796aa-->
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-<a href="http://blog.leecoach.online/" target="_blank">在线预览 Preview</a> | <a href="http://blog.csdn.net/Maple_ROSI" target="_blank">lee coach's Blog</a> | <a href="http://theme-next.simpleyyt.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.en.md)
+### Markdown
 
-[![Join the chat at https://gitter.im/simpleyyt/jekyll-theme-next](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jekyll-theme-next/lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
+```markdown
+Syntax highlighted code block
 
+# Header 1
+## Header 2
+### Header 3
 
+- Bulleted
+- List
 
+1. Numbered
+2. List
 
-## 贡献 Contributing
+**Bold** and _Italic_ and `Code` text
 
-欢迎提交问题与需求，修复代码。
+[Link](url) and ![Image](src)
+```
 
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-## 开发 Development
+### Jekyll Themes
 
-NexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/happyzhao1996/happyzhao1996.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-NexT is built for easily use with elegant appearance. First things first, always keep things simple.
+### Support or Contact
 
-
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
