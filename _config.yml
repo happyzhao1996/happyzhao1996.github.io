@@ -23,7 +23,7 @@ twitter_username: happyzhao1996
 github_username:  happyzhao1996
 
 # Build settings
-markdown: kramdown
+markdown: Redcarpet
 theme: minima
 plugins:
   - jekyll-feed
