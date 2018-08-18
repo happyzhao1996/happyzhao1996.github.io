@@ -23,12 +23,10 @@ twitter_username: happyzhao1996
 github_username:  happyzhao1996
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-redcarpet:
-    extensions: [ "hard_wrap","autolink", "tables", "strikethrough", "superscript", "with_toc_data", "highlight", "prettify","no_intra_emphasis"]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
