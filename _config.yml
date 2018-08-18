@@ -1,4 +1,4 @@
-title:            Le Zhao
+title:            HAPPY
 description:      
 
 # put your disqus here
@@ -20,8 +20,8 @@ url: https://happyzhao1996.github.io
 menu:
   - title: 'Home'
     url: '/'
-  - title: 'Fork'
-    url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme'
+  - title: 'Archive'
+    url: '/posts'
   - title: 'Install'
     url: 'http://github.com/aron-bordin/neo-hpstr-jekyll-theme#installation'
   - title: 'Tags'
@@ -29,13 +29,8 @@ menu:
   - title: 'Categories'
     url: '/categories'
     type: 'categories'
-  - title: 'Favorites'
-    url: '#'
-    submenu:
-      - title: 'Code Highlighter'
-        url: '/intro/code-highlighting-post/'
-      - title: 'Sample Post'
-        url: '/intro/sample-post/'
+  - title: 'About'
+    url: '/about'
 
 # Owner/author information
 owner:
