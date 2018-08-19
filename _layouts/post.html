@@ -8,6 +8,7 @@
           <div class="article">
             <div class="well">
                 <h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.date | date: "%b %-d, %Y" }} - {{ page.title }}</a></h1>
+                <hr style="border-top:1px solid #28323C;"/>
             {% if site.comments and page.comments %}
                 {% if site.disqus != '' %}
                 <p class="author"><a href="#disqus_thread" data-disqus-identifier="{{ page.url | slugify }}">Comments</a></p>
@@ -17,6 +18,57 @@
             {% endif %}
             <div class="post-content">
             {{ content }}
+            <hr style="border-top:1px solid #28323C;"/>
+
+            {% unless page.categories == empty %}
+            <ul class="list-unstyled list-inline">
+              <li><i class="icon-folder-open"></i></li>
+              {% assign categories_list = page.categories %}
+              {% if categories_list.first[0] == null %}
+                {% for category in categories_list %} 
+                    <li class="icon-style"><a href="{{ site.baseurl }}/categories.html">
+                        {{ category | join: "/" }} <span>({{ site.categories[category].size }})</span>
+                        {% unless forloop.last %},{% endunless %}
+                    </a></li>
+                {% endfor %}
+              {% else %}
+                {% for category in categories_list %} 
+                    <li class="icon-style"><a href="{{ site.baseurl }}/categories.html">
+                        {{ category[0] | join: "/" }} <span>/{{ category[1].size }})</span>
+                    </a></li>
+                {% endfor %}
+              {% endif %}
+            </ul>
+            {% endunless %}  
+
+            {% unless page.tags == empty %}
+            <ul class="list-unstyled list-inline">
+              <li><i class="icon-tags"></i></li>
+              {% assign tags_list = page.tags %}
+              {% if tags_list.first[0] == null %}
+                {% for tag in tags_list %} 
+                    <li class="icon-style">
+                        <a href="{{ site.baseurl }}/tags.html">
+                        {{ tag }} <span>({{ site.tags[tag].size }})</span>
+                        {% unless forloop.last %},{% endunless %}
+                        </a>
+                    </li>
+                {% endfor %}
+              {% else %}
+                {% for tag in tags_list %} 
+                    <li class="icon-style">
+                        <a href="{{ site.baseurl }}/tags.html">
+                            {{ tag[0] }} <span>({{ tag[1].size }})</span>
+                            {% unless forloop.last %},{% endunless %}
+                        </a>
+                    </li>
+                   
+                {% endfor %}
+              {% endif %}
+              {% assign tags_list = nil %}
+            </ul>
+            {% endunless %}  
+
             </div>
             {% if page.comments %}
                 {% if site.disqus != '' %}
