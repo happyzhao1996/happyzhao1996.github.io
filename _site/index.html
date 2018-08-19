@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>HAPPY</title>
+	<link rel="icon" href="/assets/images/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/css/theme.css" rel="stylesheet" type="text/css">
-    <link href="/css/syntax.css" rel="stylesheet" type="text/css">
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if lt IE 9]>
+       <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+    <![endif]-->
+    <link href="/assets/css/main.css" rel="stylesheet" type="text/css">
 
 
 </head>
@@ -18,43 +26,85 @@
 
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/">HAPPY</a>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/">首页</a></li>
-                    <li class="active visible-xs-block"><a href="/links.html">Links</a></li>
-                    <li class="active"><a href="/archive.html">Archive</a></li>
-                    <li class="active"><a href="/categories.html">Categories</a></li>
-                    <li class="active"><a href="/tags.html">Tags</a></li>
-                    <li class="active"><a href="/about.html">About</a></li>
+                    <li class="active"><a href="/post.html">投递</a></li>
+                    <li class="active"><a href="/archive.html">归档</a></li>
+                    <li class="active"><a href="/categories.html">分类</a></li>
+                    <li class="active"><a href="/tags.html">标签</a></li>
+                    <li class="active"><a href="/about.html">关于</a></li>
+                    <li class="active visible-xs-block"><a href="/links.html">链接</a></li>
                 </ul>
-              </div>
+            </div>
         </div>
     </div>
 </div>
 
 
-<div class="container container-left">
-    <div class="row">
-        <div class="col-md-3 hidden-xs">
-            <div class="sidebar well">
+<div class="wrap">
+    <div class="container container-left">
+        <div class="row">
+            <div class="col-md-3 hidden-xs">
+                
+<div class="sidebar well">
     <div class="text-center">
-    	<img src="/images/logo.png" height="200" style="margin: 0 auto;" class="img-circle"/>
+        <img src="/assets/images/logo.png" height="150" style="margin: 0 auto;" class="img-circle"/><br><br>
         Here I exist, alone but unique.
     </div>
 </div>
 
+
 <div class="sidebar well">
-    <h1>Recent Posts</h1>
+    <h1></h1>
+    <ul>
+        
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/jekyll/update/2018/08/17/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                    <li><a href="/jekyll/2017/09/05/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
+                
+            
+                
+            
+                
+            
+        
+    </ul>
+</div>
+
+
+<div class="sidebar well">
+    <h1></h1>
     <ul>
         
           <li><a href="/hatsune%20miku/picture/2018/08/17/miku_p.html">初音ミク（竖版）</a></li>
@@ -65,34 +115,52 @@
         
           <li><a href="/jekyll/update/2018/08/17/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
         
-          <li><a href="/jekyll/update/2018/08/16/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
+          <li><a href="/ed/2018/08/15/chapter1.html">第一章·电磁现象的普遍规律</a></li>
         
     </ul>
 </div>
 
 <div class="sidebar well">
-<h1>Links</h1>
+    
+<h1></h1>
 <ul>
-  <li><a href="#">One</a></li>
+  <!-- <li><a href="#">One</a></li>
   <li><a href="#">Two</a></li>
   <li><a href="#">Three</a></li>
-  <li><a href="#">Four</a></li>
+  <li><a href="#">Four</a></li> -->
+  
+  <li>
+    <a href="http://xixia.info">
+      Xixia
+    </a>
+  </li> 
+  
+  <li>
+    <a href="https://github.com/zxixia/jekyll-xixia">
+      Jekyll-Xixia
+    </a>
+  </li> 
+  
 </ul>
 
 </div>
 
-        </div>
-        <div class="col-md-9">
-            <p><img src="https://github.com/happyzhao1996/happyzhao1996.github.io/raw/master/images/nagato.jpg" alt="Welcome" width="100%" /></p>
+            </div>
+            <div class="col-md-9">
+                <p><img src="https://github.com/happyzhao1996/happyzhao1996.github.io/raw/master/images/nagato.jpg" alt="Welcome" width="100%" /></p>
 
-        </div>
-    </div>
+<div class="text-center">
+	<h1>Nice To Meet You, My Friend !</h1>
 </div>
 
-<div class="container-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
     <div class="row-fluid">
         <div class="span12 footer navbar-inverse navbar-fixed-bottom">
-            <p class="copyright">&copy;2018 Le. Thanks to <a href="http://jekyllrb.com">Jekyll</a>, <a href="https://github.com/scotte/jekyll-clean">Clean Theme</a></p>
+            <p class="copyright">&copy;2018 Le. Based on <a href="http://jekyllrb.com">Jekyll</a>, <a href="https://github.com/zxixia/jekyll-xixia">Xixia</a></p>
         </div>
     </div>
 </div>
@@ -115,3 +183,4 @@
 </body>
 </html>
 
+</div>
