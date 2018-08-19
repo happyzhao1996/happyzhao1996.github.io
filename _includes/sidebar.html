@@ -8,7 +8,7 @@
 
 {% if site.data.tops.size > 0 %}
 <div class="sidebar well">
-    <h1>{{ trans.top_posts }}</h1>
+    <h1>置顶文章</h1>
     <ul>
         {% for top in site.data.tops %}
             {% for post in site.posts %}
@@ -22,7 +22,7 @@
 {% endif %}
 
 <div class="sidebar well">
-    <h1>{{ trans.recent_posts }}</h1>
+    <h1>最新发布</h1>
     <ul>
         {% for post in site.posts limit:5 %}
           <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
