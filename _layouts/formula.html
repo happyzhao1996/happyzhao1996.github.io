@@ -18,7 +18,7 @@ layout: default
 
         <span class="post-date">
             {% assign date_format = site.date_format.title %}
-            {{ page.date | date: date_format }}
+            {{ page.date | date: "%Y-%m-%d %H:%M" }}
         </span>
 
         <hr style="border-top:1px solid #28323C;"/>
