@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-This is my Blog (temporary): [https://happyzhao1996.gothub.io](https://happyzhao1996.github.io)
+This is my Blog (temporary): [https://happyzhao1996.github.io](https://happyzhao1996.github.io)
 
 You can use the [editor on GitHub](https://github.com/happyzhao1996/happyzhao1996.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
