@@ -3,9 +3,11 @@ layout: default
 ---
 
 <div class="well article">
+    <h1>Tags</h1>
+    <hr/>
 {% assign sortedtags = site.tags | sort %}
 {% for tag in sortedtags %}
-    <h2>{{ tag[0] | capitalize }}</h2>
+    <h3>{{ tag[0] | capitalize }}</h3>
     <ul>
         {% assign pages_list = tag[1] %}
         {% for node in pages_list %}

@@ -3,9 +3,11 @@ layout: default
 ---
 
 <div class="well article">
+    <h1>Catagories</h1>
+    <hr/>
 {% assign sortedcategories = site.categories | sort %}
 {% for category in sortedcategories %}
-    <h2>{{ category[0] | capitalize }}</h2>
+    <h3>{{ category[0] | capitalize }}</h3>
     <ul>
         {% assign pages_list = category[1] %}
         {% for node in pages_list %}
