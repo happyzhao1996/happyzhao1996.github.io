@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="well article">
+
+    <h1>Post</h1>
+    <hr/>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="post-meta">{{ post.date | date: "%b.%d, %Y" }}</span>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+<!--    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+
+</div>
