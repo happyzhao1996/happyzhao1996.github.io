@@ -25,6 +25,7 @@
     <h1>最新发布</h1>
     <ul>
         {% for post in site.posts limit:5 %}
+          <!--<li><nobr><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></nobr></li>-->
           <li><nobr><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></nobr></li>
         {% endfor %}
     </ul>
