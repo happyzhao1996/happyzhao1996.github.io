@@ -8,9 +8,13 @@ layout: default
 <div class="pagination">
     {% if page.next %}
     <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">后一篇</a>
+    {% else %}
+    <a class="btn btn-default" class="next">没有了</a>
     {% endif %}
     {% if page.previous %}
     <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">前一篇</a>
+    {% else %}
+    <a class="btn btn-default" class="next">没有了</a>
     {% endif %}
 </div>
         <h2><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h2>
@@ -81,9 +85,13 @@ layout: default
 <div class="pagination">
     {% if page.next %}
     <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">后一篇</a>
+    {% else %}
+    <a class="btn btn-default" class="next">没有了</a>
     {% endif %}
     {% if page.previous %}
     <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">前一篇</a>
+    {% else %}
+    <a class="btn btn-default" class="next">没有了</a>
     {% endif %}
 </div>
 
