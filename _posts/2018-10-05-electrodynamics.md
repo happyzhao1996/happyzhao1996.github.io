@@ -135,6 +135,12 @@ $$
 \right.
 $$
 
+* 电偶极子是一对间距为$$l$$、电荷量为$$q$$的点电荷，可由$$\vec{p}=q\vec{l}$$来表示。位于$$\vec{r_0}$$处的电偶极子在$$\vec{r}$$处产生的电势为
+
+$$
+\varphi=\frac{1}{4\pi\varepsilon_0}\frac{\vec{p}\cdot\left(\vec{r}-\vec{r}_0\right)}{\left|\vec{r}-\vec{r}_0\right|^3}
+$$
+
 [返回目录](#0.0)
 
 ---
