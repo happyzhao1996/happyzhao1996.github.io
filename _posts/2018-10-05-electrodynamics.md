@@ -7,6 +7,8 @@ categories: [Qualifying Exam]
 description: 博资考中可能用到的电动力学公式
 ---
 
+# 电动力学公式
+
 ### <h00 id='0.0'>目录</h00>
 
 * [第一章 电磁现象的普遍规律](#1.0)
@@ -87,10 +89,10 @@ $$
 $$
 \left\{
 \begin{aligned}
-\oint_L\vec{E}\cdot\mathrm{d}\vec{l}&=-\frac{\mathrm{d}}{\mathrm{d}t}\vec{B}\cdot\mathrm{d}\vec{S}\\\\
-\oint_L\vec{H}\cdot\mathrm{d}\vec{l}&=I_f+\frac{\mathrm{d}}{\mathrm{d}t}\int_S\vec{D}\cdot\mathrm{d}\vec{S}\\\\
-\oint_S\vec{D}\cdot\mathrm{d}\vec{S}&=Q_f\\\\
-\oint_S\vec{B}\cdot\mathrm{d}\vec{S}&=0
+&\oint_L\vec{E}\cdot\mathrm{d}\vec{l}=-\frac{\mathrm{d}}{\mathrm{d}t}\int_S\vec{B}\cdot\mathrm{d}\vec{S}\\\\
+&\oint_L\vec{H}\cdot\mathrm{d}\vec{l}=I_f+\frac{\mathrm{d}}{\mathrm{d}t}\int_S\vec{D}\cdot\mathrm{d}\vec{S}\\\\
+&\oint_S\vec{D}\cdot\mathrm{d}\vec{S}=Q_f\\\\
+&\oint_S\vec{B}\cdot\mathrm{d}\vec{S}=0
 \end{aligned}
 \right.
 $$
@@ -100,10 +102,10 @@ $$
 $$
 \left\{
 \begin{aligned}
-\nabla\times\vec{E}&=-\frac{\partial \vec{B}}{\partial t}\\\\
-\nabla\times\vec{H}&=\vec{J}+\frac{\partial \vec{D}}{\partial t}\\\\
-\nabla\cdot\vec{D}&=\rho\\\\
-\nabla\cdot\vec{B}&=0
+&\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\\\\
+&\nabla\times\vec{H}=\vec{J}+\frac{\partial \vec{D}}{\partial t}\\\\
+&\nabla\cdot\vec{D}=\rho\\\\
+&\nabla\cdot\vec{B}=0
 \end{aligned}
 \right.
 $$
@@ -140,6 +142,8 @@ $$
 $$
 \varphi=\frac{1}{4\pi\varepsilon_0}\frac{\vec{p}\cdot\left(\vec{r}-\vec{r}_0\right)}{\left|\vec{r}-\vec{r}_0\right|^3}
 $$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电偶极子从负电荷指向正电荷的方向为电偶极子的方向
 
 [返回目录](#0.0)
 
@@ -237,35 +241,91 @@ $$
 
 [返回目录](#0.0)
 
-* 利用公式$$\nabla\times\left(\nabla\times\vec{E}\right)=\nabla\left(\nabla\cdot\vec{E}\right)-\nabla^2\vec{E}=-\nabla^2\vec{E}$$，可以得到
-
-$$
-\nabla^2\vec{E}-\mu_0\varepsilon_0\frac{\partial^2\vec{E}}{\partial t^2}=0
-$$
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;考虑到$$c=1/\sqrt{\mu_0\varepsilon_0}$$，有
+* 在真空中，若设电流密度$$\vec{J}$$和电荷密度$$\rho$$为$$0$$，则麦克斯韦方程组可以表示为
 
 $$
 \left\{
 \begin{aligned}
-\nabla^2\vec{E}-\frac{1}{c^2}\frac{\partial^2\vec{E}}{\partial t^2}&=0\\\\
-\nabla^2\vec{B}-\frac{1}{c^2}\frac{\partial^2\vec{B}}{\partial t^2}&=0
+&\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\\\\
+&\nabla\times\vec{H}=\frac{\partial \vec{D}}{\partial t}\\\\
+&\nabla\cdot\vec{D}=0\\\\
+&\nabla\cdot\vec{B}=0
 \end{aligned}
 \right.
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可写成分量式
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联立1、2式有
 
 $$
 \left\{
 \begin{aligned}
-\vec{E}\left(\vec{x},t\right)=\vec{E}_0\mathrm{e}^{i\left(\vec{k}\cdot\vec{x}-\omega t\right)}\\\\
-\vec{B}\left(\vec{x},t\right)=\vec{B}_0\mathrm{e}^{i\left(\vec{k}\cdot\vec{x}-\omega t\right)}
+&\nabla^2\vec{E}-\mu_0\varepsilon_0\frac{\partial^2\vec{E}}{\partial t^2}=\nabla^2\vec{E}-\frac{1}{c^2}\frac{\partial^2\vec{E}}{\partial t^2}=0\\\\
+&\nabla^2\vec{B}-\mu_0\varepsilon_0\frac{\partial^2\vec{B}}{\partial t^2}=\nabla^2\vec{B}-\frac{1}{c^2}\frac{\partial^2\vec{B}}{\partial t^2}=0
 \end{aligned}
 \right.
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在介质中和真空中，分别有
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中利用了公式
+
+$$
+\nabla\times\left(\nabla\times\vec{E}\right)=\nabla\left(\nabla\cdot\vec{E}\right)-\nabla^2\vec{E}=-\nabla^2\vec{E}\\\\
+\nabla\times\left(\nabla\times\vec{B}\right)=\nabla\left(\nabla\cdot\vec{B}\right)-\nabla^2\vec{B}=-\nabla^2\vec{B}
+$$
+
+* 考虑角频率为$$\omega$$的电磁波，则其电场和磁场可以表示为
+
+$$
+\left\{
+\begin{aligned}
+\vec{E}\left(\vec{x},t\right)&=\vec{E}\left(x\right)\mathrm{e}^{-i\omega t}\\\\
+\vec{B}\left(\vec{x},t\right)&=\vec{B}\left(x\right)\mathrm{e}^{-i\omega t}
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代入麦克斯韦方程组，则有
+
+$$
+\left\{
+\begin{aligned}
+&\nabla\times\vec{E}=i\omega\mu\vec{H}\\\\
+&\nabla\times\vec{H}=-i\omega\varepsilon\vec{E}\\\\
+&\nabla\cdot\vec{E}=0\\\\
+&\nabla\cdot\vec{H}=0
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联立1、2式有
+
+$$
+\nabla\times\left(\nabla\times\vec{E}\right)=\omega^2\mu\varepsilon\vec{E}\Leftrightarrow\nabla^2\vec{E}+k^2\vec{E}=0
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$k=\omega\sqrt{\mu\varepsilon}$$。解出$$\vec{E}$$后，$$\vec{B}$$可以表示为
+
+$$
+\vec{B}=-\frac{i}{k}\sqrt{\mu\varepsilon}\nabla\times\vec{E}
+$$
+
+* 考虑平面电磁波的表达式
+
+$$
+\left\{
+\begin{aligned}
+\vec{E}\left(\vec{x},t\right)&=\vec{E}_0\mathrm{e}^{i\left(\vec{k}\cdot\vec{x}-\omega t\right)}\\\\
+\vec{B}\left(\vec{x},t\right)&=\vec{B}_0\mathrm{e}^{i\left(\vec{k}\cdot\vec{x}-\omega t\right)}
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;则$$\vec{B}$$与$$\vec{E}$$的关系为
+
+$$
+\vec{B}=-\frac{i}{k}\sqrt{\mu\varepsilon}\nabla\times\vec{E}=\sqrt{\mu\varepsilon}\frac{\vec{k}}{k}\times\vec{E}=\sqrt{\mu\varepsilon}\vec{e}_k\times\vec{E}=\frac{1}{v}\vec{e}_k\times\vec{E}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因此平面电磁波电场与磁场的振幅比为
 
 $$
 \left|\frac{\vec{E}}{\vec{B}}\right|=\frac{1}{\sqrt{\mu\varepsilon}}=v\\\\
@@ -356,6 +416,214 @@ $$
 \frac{E_2}{E_0}&=\frac{2\cos\theta_0\sin\theta_2}{\sin\left(\theta_0+\theta_2\right)\cos\left(\theta_0-\theta_2\right)}
 \end{aligned}
 \right.
+$$
+
+* 在导体中应用麦克斯韦方程组$$\nabla\cdot\vec{D}=\rho$$，可得到导体中电荷密度与电场的微分方程为
+
+$$
+\varepsilon\nabla\cdot\vec{E}=\rho
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结合微分形式欧姆定律$$\vec{J}=\sigma\vec{E}$$，可以得到
+
+$$
+\nabla\cdot\vec{J}=\frac{\sigma}{\varepsilon}\rho
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而由于电荷密度的变化与电流密度满足关系
+
+$$
+\frac{\partial \rho}{\partial t}=-\nabla\cdot\vec{J}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有
+
+$$
+\frac{\partial \rho}{\partial t}=-\nabla\cdot\vec{J}=-\frac{\sigma}{\varepsilon}\rho
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;求解此微分方程，可以得到
+
+$$
+\rho\left(t\right)=\rho_0\mathrm{e}^{-\frac{\sigma}{\varepsilon}t}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$\tau=\sigma/\rho$$，称为电荷密度随时间衰减的特征时间
+
+* 在导体中，麦克斯韦方程组可以写作
+
+$$
+\left\{
+\begin{aligned}
+&\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\\\\
+&\nabla\times\vec{H}=\vec{J}+\frac{\partial \vec{D}}{\partial t}\\\\
+&\nabla\cdot\vec{D}=0\\\\
+&\nabla\cdot\vec{B}=0
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于一频率为$$\omega$$的电磁波，可令
+
+$$
+\vec{D}=\varepsilon\vec{E},\ \ \ \ \ \vec{B}=\mu\vec{H}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;则麦克斯韦方程组等价于
+
+$$
+\left\{
+\begin{aligned}
+&\nabla\times\vec{E}=i\omega\mu\vec{H}\\\\
+&\nabla\times\vec{H}=-i\omega\varepsilon\vec{E}+\sigma\vec{E}\\\\
+&\nabla\cdot\vec{E}=0\\\\
+&\nabla\cdot\vec{H}=0
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因此可以在形式上引入“复电容率”
+
+$$
+\varepsilon'=\varepsilon+i\frac{\sigma}{\omega}
+$$
+
+* 电磁波在导体表面会发生反射与折射，在垂直入射时，有
+
+$$
+E+E'=E'',\ \ \ \ \ H-H'=H''
+$$
+
+[返回目录](#0.0)
+
+---
+
+### <h05 id='5.0'>第五章 电磁波的辐射</h05>
+
+[返回目录](#0.0)
+
+* 考虑真空中的电磁波，麦克斯韦方程组为
+
+$$
+\left\{
+\begin{aligned}
+&\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\\\\
+&\nabla\times\vec{H}=\vec{J}+\frac{\partial \vec{D}}{\partial t}\\\\
+&\nabla\cdot\vec{D}=\rho\\\\
+&\nabla\cdot\vec{B}=0
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于$$\vec{B}$$是无源的，可以引入磁矢势$$\vec{A}$$，有$$\vec{B}=\nabla\times\vec{A}$$。代入1式，则有
+
+$$
+\nabla\times\vec{E}=-\nabla\times\frac{\partial\vec{A}}{\partial t}\Leftrightarrow\nabla\times\left(\vec{E}+\frac{\partial\vec{A}}{\partial t}\right)=0
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说明括号内的矢量为无旋的，因此可以用标势的负梯度来描述：
+
+$$
+\vec{E}+\frac{\partial\vec{A}}{\partial t}=-\nabla\varphi
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因此电场可以表示为
+
+$$
+\vec{E}=-\nabla\varphi-\frac{\partial \vec{A}}{\partial t}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此处的$$\varphi$$不再是传统意义上的电势
+
+* 推迟势公式为
+
+$$
+\vec{A}\left(\vec{x},t\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J}\left(\vec{x}',t-\frac{r}{c}\right)}{r}\mathrm{d}V'
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若电流$$\vec{J}$$是一定频率的交变电流，即有
+
+$$
+\vec{J}\left(\vec{x}',t\right)=\vec{J}\left(x'\right)\mathrm{e}^{-i\omega t}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结合上述两式，有
+
+$$
+\vec{A}\left(\vec{x},t\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J}\left(x'\right)\mathrm{e}^{i\left(kr-\omega t\right)}}{r}\mathrm{d}V'
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若令
+
+$$
+\vec{A}\left(\vec{x},t\right)=\vec{A}\left(\vec{x}\right)\mathrm{e}^{-i\omega t}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;则有
+
+$$
+\vec{A}\left(\vec{x}\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J}\left(x'\right)\mathrm{e}^{ikr}}{r}\mathrm{d}V'
+$$
+
+* 电偶极辐射：将推迟势展开，则第一项可以表示为
+
+$$
+\vec{A}\left(\vec{x}\right)=\frac{\mu_0\mathrm{e}^{ikR}}{4\pi R}\int_V\vec{J}\left(\vec{x}'\right)\mathrm{d}V'
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设电流密度表示为$$\vec{J}=\sum_i n_iq_i\vec{v}_i$$，则有
+
+$$
+\int_V\vec{J}\left(\vec{x}'\right)\mathrm{d}V'=\sum_iq_i\vec{v}_i=\frac{\mathrm{d}}{\mathrm{d}t}\sum q_i\vec{x}_i=\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}=\dot{\vec{p}}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$p$$为电偶极矩，因此推迟势的第一项代表振荡电偶极矩产生的辐射，即有
+
+$$
+\vec{A}\left(\vec{x}\right)=\frac{\mu_0\mathrm{e}^{ikR}}{4\pi R}\dot{\vec{p}}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;算符$$\nabla$$作用时，仅需对相因子作用，即有
+
+$$
+\begin{aligned}
+&\nabla\rightarrow ik\vec{e}_R\\\\
+&\frac{\partial}{\partial t}\rightarrow -i\omega
+\end{aligned}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由此可得辐射场
+
+$$
+\left\{
+\begin{aligned}
+&\vec{B}=\nabla\times\vec{A}=\frac{i\mu_0k}{4\pi R}\mathrm{e}^{ikR}\vec{e}_R\times\dot{\vec{p}}=\frac{\mathrm{e}^{ikR}}{4\pi\varepsilon_0 c^3R}\ddot{\vec{p}}\times\vec{e}_R\\\\
+&\vec{E}=\frac{ic}{k}\nabla\times\vec{B}=c\vec{B}\times\vec{e}_R=\frac{\mathrm{e}^{ikR}}{4\pi\varepsilon_0 c^2R}\left(\ddot{\vec{p}}\times\vec{e}_R\right)\times\vec{e}_R
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在球坐标系中，有
+
+$$
+\left\{
+\begin{aligned}
+&\vec{B}=\frac{1}{4\pi\varepsilon_0 c^3R}\ddot{\vec{p}}\mathrm{e}^{ikR}\sin\theta\vec{e}_\varphi\\\\
+&\vec{E}=\frac{1}{4\pi\varepsilon_0 c^2R}\ddot{\vec{p}}\mathrm{e}^{ikR}\sin\theta\vec{e}_\theta
+\end{aligned}
+\right.
+$$
+
+* 电磁波的平均辐射功率为
+
+$$
+\bar{\vec{S}}=\frac{1}{2}\mathrm{Re}\left(\vec{E}^*\times\vec{H}\right)
+$$
+
+* 电磁场的动量密度为
+
+$$
+\vec{g}=\varepsilon_0\vec{E}\times\vec{B}=\frac{1}{c^2}\vec{S}
 $$
 
 [返回目录](#0.0)
