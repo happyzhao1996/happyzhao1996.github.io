@@ -227,6 +227,16 @@ $$
 
 * 磁矢势
 
+$$
+\vec{A}\left(\vec{x}\right)=\frac{\mu}{4\pi}\int_V\frac{\vec{J}\left(\vec{x}'\right)\mathrm{d}V'}{r}=\frac{\mu}{4\pi}\int_l\frac{I\mathrm{d}\vec{l}}{r}
+$$
+
+* 磁感应强度$$\vec{B}$$和磁矢势$$\vec{A}$$的关系为
+
+$$
+\vec{B}=\nabla\times\vec{A}
+$$
+
 * 在没有电流元的地方，可以引入磁标势，则磁场强度可以表示为$$\vec{H}=-\nabla\varphi_m$$，有
 
 $$
@@ -494,6 +504,12 @@ $$
 E+E'=E'',\ \ \ \ \ H-H'=H''
 $$
 
+* 有
+
+$$
+\omega=ck,\ \ \ \ \ k=\frac{\omega}{c}
+$$
+
 [返回目录](#0.0)
 
 ---
@@ -614,6 +630,29 @@ $$
 \right.
 $$
 
+* 电偶极辐射的总辐射功率为
+
+$$
+P=\frac{1}{4\pi\varepsilon_0}\frac{\left|\ddot{\vec{p}}\right|^2}{3c^3}
+$$
+
+* 磁偶极辐射的电场、磁场可以表示为
+
+$$
+\left\{
+\begin{aligned}
+&\vec{B}=\frac{\mu_0\mathrm{e}^{ikR}}{4\pi c^2R}\left(\ddot{\vec{m}}\times\vec{e}_R\right)\times\vec{e}_{R}\\\\
+&\vec{E}=c\vec{B}\times\vec{e}_{R}=-\frac{\mu_0\mathrm{e}^{ikR}}{4\pi cR}\left(\ddot{\vec{m}}\times\vec{e}_R\right)
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总辐射功率为
+
+$$
+P=\frac{\mu_0\omega^4\left|\vec{m}\right|^2}{12\pi c^3}
+$$
+
 * 电磁波的平均辐射功率为
 
 $$
@@ -624,6 +663,25 @@ $$
 
 $$
 \vec{g}=\varepsilon_0\vec{E}\times\vec{B}=\frac{1}{c^2}\vec{S}
+$$
+
+
+* 若考虑圆形线圈，其磁矩振幅为$$m=\pi a^2I$$，代入上式有
+
+$$
+P=\frac{\mu_0\omega^3\pi a^4I^2}{12c^3}
+$$
+
+* 电偶极辐射的能流密度为
+
+$$
+\bar{\vec{S}}=\frac{\mu_0\left|\ddot{\vec{p}}\right|^2}{32\pi^2c^3R^2}\sin^2\theta\vec{e}_R
+$$
+
+* 磁偶极辐射的能流密度为
+
+$$
+\bar{\vec{S}}=\frac{\mu_0\omega^4\left|\vec{m}\right|^2}{32\pi^2c^3R^2}\sin^2\theta\vec{e}_R
 $$
 
 [返回目录](#0.0)

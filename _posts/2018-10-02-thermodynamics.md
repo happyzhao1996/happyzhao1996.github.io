@@ -10,5 +10,5 @@ description: 博资考中可能用到的热学公式
 * 理想气体的熵
 
 $$
-S_m=nC_{V,m}\ln T+R\ln V_m+S_0
+S_m=C_{V,m}\ln T+R\ln V_m+S_0
 $$
