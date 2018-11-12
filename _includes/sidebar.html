@@ -1,36 +1,7 @@
 {% assign trans = site.data.values[site.lan] %}
-<div class="sidebar well">
+<div class="well">
     <div class="text-center">
         <img src="{{ site.baseurl }}/assets/images/logo.png" height="150" style="margin: 0 auto;" class="img-circle"/><br><br>
         {{ site.description }}
     </div>
-</div>
-
-{% if site.data.tops.size > 0 %}
-<div class="sidebar well">
-    <h1>置顶文章</h1>
-    <ul>
-        {% for top in site.data.tops %}
-            {% for post in site.posts %}
-                {% if post.url contains top.url %}
-                    <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
-    </ul>
-</div>
-{% endif %}
-
-<div class="sidebar well">
-    <h1>最新发布</h1>
-    <ul>
-        {% for post in site.posts limit:5 %}
-          <!--<li><nobr><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></nobr></li>-->
-          <li><nobr><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></nobr></li>
-        {% endfor %}
-    </ul>
-</div>
-
-<div class="sidebar well">
-    {% include links-list.html %}
 </div>

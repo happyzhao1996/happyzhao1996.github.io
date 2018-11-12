@@ -1,18 +1,29 @@
-{% include header.html %}
+<!DOCTYPE html>
+<html lang="cn">
 
-<div class="wrap">
-    <div class="container container-left">
-        <div class="row">
-            <div class="col-md-3 col-sm-4 hidden-xs">
-                {% include sidebar.html %}
-            </div>
-            <div class="col-md-9 col-sm-8">
-                {{ content }}
-            </div>
-            <div class="col-md-0 col-sm-0 hidden-xs">
+{% include head.html %}
+
+<body>
+    {% include navbar.html %}
+    <div class="wrap">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-0">
+                </div>
+
+                <div class="col-sm-12">    
+                    {{ content }}
+                    <br><br>
+                </div>
+
+                <div class="col-sm-0">
+                </div> 
+
             </div>
         </div>
+        {% include footer.html %}
     </div>
-    </br></br>
-    {% include footer.html %}
-</div>
+</body>
+
+</html>
