@@ -3,7 +3,8 @@ html {
 }
 
 body {
-    background-image: url(/assets/images/canvas_bg_0.jpg);
+    background-image: url(/assets/images/canvas_bg.jpg);
+    background-attachment:fixed;
     padding-top: 60px;
     height:100%;
 }
@@ -16,7 +17,7 @@ body {
 .footer {
     text-align: center;
     color: $footer-color;
-    position:absolute;
+    position:fixed;
     bottom:0;
     left:0;
     width:100%;
