@@ -178,7 +178,7 @@ $$
 | 粒子数$$N$$ | $$N=Z'\mathrm{e}^{-\alpha}$$ | $$N=-\frac{\partial}{\partial\alpha}\ln\mathit{\Xi}'$$ | $$N=-\frac{\partial}{\partial\alpha}\ln\mathit{\Xi}'$$ |
 | 内能$$U$$ | $$U=-N\frac{\partial}{\partial\beta}\ln Z'$$ | $$U=-\frac{\partial}{\partial\beta}\ln\mathit{\Xi}'$$ | $$U=-\frac{\partial}{\partial\beta}\ln\mathit{\Xi}'$$ |
 | 压强$$p$$ | $$p=\frac{N}{\beta}\frac{\partial}{\partial V}\ln Z'$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln\mathit{\Xi}'$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln\mathit{\Xi}'$$ |
-| 熵$$S$$ | $$S=Nk_B\left(\ln Z'-\beta\frac{\partial\ln Z'}{\partial\beta}\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ |
+| 熵$$S$$ | $$S=Nk_B\left(\ln Z'-\beta\frac{\partial}{\partial\beta}\ln Z'\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ |
 {:class="table table-bordered"}
 {:.table-striped}
 
@@ -190,7 +190,7 @@ $$
 
 [返回目录](#0.0)
 
-* 自由能：$$F=U-TS$$
+* 亥姆霍兹自由能：$$F=U-TS=-Nk_BT\ln Z$$
 * 吉布斯函数：$$G=N\mu=-Nk_BT\alpha$$
 * 巨热力势：$$\Psi=F-G=-k_BT\ln\mathit{\Xi}'$$
 
