@@ -18,8 +18,8 @@ description: 博资考中可能用到的统计力学原理与公式
 * [3.费米-狄拉克统计](#3.0)
 * [4.巨配分函数与各力学量](#4.0)
 * [5.三种统计的关系](#5.0)
-* [6.其它一些热力学量的关系](#6.0)
-* [7.关于态密度与配分函数的计算](#7.0)
+* [6.关于态密度与配分函数的计算](#6.0)
+* [7.其它一些热力学量的关系与琐碎的项](#7.0)
 
 ---
 
@@ -177,9 +177,9 @@ $$
 | 第$$l$$能级的粒子数 | $$a_l=\frac{g_l}{\mathrm{e}^{\alpha+\beta\varepsilon_l}}$$ | $$a_l=\frac{g_l}{\mathrm{e}^{\alpha+\beta\varepsilon_l}-1}$$ | $$a_l=\frac{g_l}{\mathrm{e}^{\alpha+\beta\varepsilon_l}+1}$$ |
 | （巨）配分函数 | $$Z'=\sum\limits_l g_l\mathrm{e}^{-\beta\varepsilon_l}$$ | $$\mathit{\Xi}'=\prod\limits_l\left(1-\mathrm{e}^{-\alpha-\beta\varepsilon_l}\right)^{-g_l}$$ | $$\mathit{\Xi}'=\prod\limits_l\left(1+\mathrm{e}^{-\alpha-\beta\varepsilon_l}\right)^{-g_l}$$ |
 | 粒子数$$N$$ | $$N=Z'\mathrm{e}^{-\alpha}$$ | $$N=-\frac{\partial}{\partial\alpha}\ln\mathit{\Xi}'$$ | $$N=-\frac{\partial}{\partial\alpha}\ln\mathit{\Xi}'$$ |
-| 内能$$U$$ | $$U=-N\frac{\partial}{\partial\beta}\ln Z'$$ | $$U=-\frac{\partial}{\partial\beta}\ln\mathit{\Xi}'$$ | $$U=-\frac{\partial}{\partial\beta}\ln\mathit{\Xi}'$$ |
-| 压强$$p$$ | $$p=\frac{N}{\beta}\frac{\partial}{\partial V}\ln Z'$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln\mathit{\Xi}'$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln\mathit{\Xi}'$$ |
-| 熵$$S$$ | $$S=Nk_B\left(\ln Z'-\beta\frac{\partial}{\partial\beta}\ln Z'\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ |
+| 内能$$U$$ | $$U=-\frac{\partial}{\partial\beta}\ln Z'$$ | $$U=-\frac{\partial}{\partial\beta}\ln\mathit{\Xi}'$$ | $$U=-\frac{\partial}{\partial\beta}\ln\mathit{\Xi}'$$ |
+| 压强$$p$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln Z'$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln\mathit{\Xi}'$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln\mathit{\Xi}'$$ |
+| 熵$$S$$ | $$S=k_B\left(\ln Z'-\beta\frac{\partial}{\partial\beta}\ln Z'\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ |
 {:class="table table-bordered"}
 {:.table-striped}
 
@@ -187,30 +187,93 @@ $$
 
 ---
 
-### <h06 id='6.0'>6.其它一些热力学量的关系</h06>
+### <h07 id='6.0'>6.关于态密度与配分函数的计算</h06>
 
 [返回目录](#0.0)
 
-* 亥姆霍兹自由能：$$F=U-TS=-Nk_BT\ln Z$$
-* 吉布斯函数：$$G=N\mu=-Nk_BT\alpha$$
-* 巨热力势：$$\Psi=F-G=-k_BT\ln\mathit{\Xi}'$$
+#### 对于某一运动的粒子，计算其运动的配分函数的大致步骤如下：
 
-[返回目录](#0.0)
-
----
-
-### <h07 id='7.0'>7.关于态密度与配分函数的计算</h07>
-
-[返回目录](#0.0)
-
-* 对于某一运动的粒子，计算其运动的配分函数的大致步骤为：首先写出其配分函数的一般表达式有
+* 首先写出其配分函数的一般表达式有
 
 $$
-Z'=\int\frac{\mathrm{d}\omega}{h^3}\mathrm{e}^{-\alpha-\beta\varepsilon}
+Z'=\int\frac{\mathrm{d}\omega}{h^3}\mathrm{e}^{-\alpha-\beta\varepsilon}=\int\frac{1}{h^3}\mathrm{e}^{-\alpha-\beta\varepsilon}\mathrm{d}x\mathrm{d}y\mathrm{d}z\mathrm{d}p_x\mathrm{d}p_y\mathrm{d}p_z
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$\mathrm{d}\omega$$是对动量空间与真实空间的积分（包含6个积分变量）
 
+* 接下来，从$$\varepsilon$$中将空间部分与速度部分分开，空间部分与$$\mathrm{d}x$$一起积分，速度部分与$$\mathrm{d}p_x$$一起积分。真实空间的体积元化为球积分有
+
+$$
+\mathrm{d}x\mathrm{d}y\mathrm{d}z=r^2\mathrm{d}r\sin\theta\mathrm{d}\theta\mathrm{d}\varphi
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;动量空间的体积元化为求面积分有
+
+$$
+\mathrm{d}p_x\mathrm{d}p_y\mathrm{d}p_z=4\pi p^2\mathrm{d}p
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分别积分并相乘，即可得到配分函数的表达式
+
+* 若已知配分函数，则态密度可以表示为
+
+$$
+p=\frac{1}{Z}\int_x\int_p\frac{1}{h^3}\mathrm{e}^{-\alpha-\beta\varepsilon}\mathrm{d}x\mathrm{d}p
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$\int_x$$和$$\int_p$$分别为对指定空间范围和动量范围的积分
+
 [返回目录](#0.0)
 
 ---
+
+### <h08 id='7.0'>7.其它一些热力学量的关系与琐碎的项</h07>
+
+[返回目录](#0.0)
+
+* 亥姆霍兹自由能：$$F=U-TS=-k_BT\ln Z$$
+* 吉布斯函数：$$G=N\mu=-Nk_BT\alpha$$
+* 巨热力势：$$\Psi=F-G=-k_BT\ln\mathit{\Xi}'$$
+
+* 理想气体的熵
+
+$$
+S_m=C_{V,m}\ln T+R\ln V_m+S_0
+$$
+
+* 积分运算
+
+$$
+\int_0^\infty\mathrm{e}^{-x^2}x^2\mathrm{d}x=\frac{\sqrt{\pi}}{4}
+$$
+
+* 无限求和的结果
+
+$$
+\sum\limits_k^\infty\mathrm{e}^{-ak}=\frac{1}{1-\mathrm{e}^{-a}}
+$$
+
+* 全同粒子的附加项吉布斯自由能为$$k_BT\ln n!$$
+
+* 斯特林公式：$$\ln m!\approx m\left(\ln m-1\right)$$
+
+* 热力学变换：$$\mathrm{d}U=T\mathrm{d}S-p\mathrm{d}V$$，$$H=U+pV$$，$$F=U-TS$$，$$G=U-TS+pV$$
+
+* 组合系统的配分函数可以表示为**独立子系统**的配分函数的乘积
+
+* 若已知系统内能$$U$$，求解各力学量：
+
+$$
+T=\frac{\partial U}{\partial S},\ \ \ p=-\frac{\partial U}{\partial V},\ \ \ \mu=\frac{\partial U}{\partial N}
+$$
+
+* 等容摩尔热容与等压摩尔热容：
+
+$$
+C_{V,m}=\frac{N_A}{N}\frac{\partial U}{\partial T},\ \ \ C_{p,m}=\frac{N_A}{N}\frac{\partial H}{\partial T},\ \ \ \gamma=\frac{C_p}{C_V}
+$$
+
+[返回目录](#0.0)
+
+---
+
