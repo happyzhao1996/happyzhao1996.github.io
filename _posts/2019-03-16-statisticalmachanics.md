@@ -179,7 +179,7 @@ $$
 | 粒子数$$N$$ | $$N=Z'\mathrm{e}^{-\alpha}$$ | $$N=-\frac{\partial}{\partial\alpha}\ln\mathit{\Xi}'$$ | $$N=-\frac{\partial}{\partial\alpha}\ln\mathit{\Xi}'$$ |
 | 内能$$U$$ | $$U=-\frac{\partial}{\partial\beta}\ln Z'$$ | $$U=-\frac{\partial}{\partial\beta}\ln\mathit{\Xi}'$$ | $$U=-\frac{\partial}{\partial\beta}\ln\mathit{\Xi}'$$ |
 | 压强$$p$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln Z'$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln\mathit{\Xi}'$$ | $$p=\frac{1}{\beta}\frac{\partial}{\partial V}\ln\mathit{\Xi}'$$ |
-| 熵$$S$$ | $$S=k_B\left(\ln Z'-\beta\frac{\partial}{\partial\beta}\ln Z'\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ |
+| 熵$$S$$ | $$S=k_B\left(\ln Z'-\beta\frac{\partial}{\partial\beta}\ln Z'\right)=k_B\ln Z'+\frac{U}{T}$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ | $$S=k_B\left(\ln\mathit{\Xi}'+\alpha N+\beta U\right)$$ |
 {:class="table table-bordered"}
 {:.table-striped}
 
@@ -244,7 +244,9 @@ $$
 * 积分运算
 
 $$
-\int_0^\infty\mathrm{e}^{-x^2}x^2\mathrm{d}x=\frac{\sqrt{\pi}}{4}
+\int_0^\infty\mathrm{e}^{-x^2}x^2\mathrm{d}x=\frac{\sqrt{\pi}}{4}\\
+\int_0^\infty\mathrm{e}^{-x^2}x\mathrm{d}x=\frac{1}{2}\\
+\int_0^\infty\mathrm{e}^{-x^2}\mathrm{d}x=\frac{\sqrt{\pi}}{2}
 $$
 
 * 无限求和的结果
@@ -271,6 +273,44 @@ $$
 
 $$
 C_{V,m}=\frac{N_A}{N}\frac{\partial U}{\partial T},\ \ \ C_{p,m}=\frac{N_A}{N}\frac{\partial H}{\partial T},\ \ \ \gamma=\frac{C_p}{C_V}
+$$
+
+* 当粒子数不守恒时，有$$\alpha=-\mu/k_BT=0$$
+
+* 克劳修斯-克拉伯龙方程：
+
+$$
+\frac{\mathrm{d}p}{\mathrm{d}T}=\frac{L}{T\left(V_l-V_s\right)}
+$$
+
+* 黑体辐射在$$f\sim f+\mathrm{d}f$$频率范围内的辐射能量密度可以表示为
+
+$$
+U\left(f,T\right)\mathrm{d}f=\frac{8\pi hf^3}{c^3}\frac{1}{\mathrm{e}^{hf/k_BT}-1}\mathrm{d}f
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相应的光子数密度可以表示为
+
+$$
+n\left(f,T\right)\mathrm{d}f=\frac{8\pi f^2}{c^3}\frac{1}{\mathrm{e}^{hf/k_BT}-1}\mathrm{d}f
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总的光子数密度为
+
+$$
+n\left(T\right)=\int_0^\infty n\left(f,T\right)\mathrm{d}f=8\pi\left(\frac{k_BT}{cn}\right)^3\int_0^\infty\frac{x^2}{\mathrm{e}^x-1}\mathrm{d}x
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中，积分的数值结果为
+
+$$
+\int_0^\infty\frac{x^2}{\mathrm{e}^x-1}\mathrm{d}x\approx2.404
+$$
+
+* 单个气体分子转动的配分函数可以表示为
+
+$$
+z_R=\sum_J\left(2J+1\right)\mathrm{e}^{-\varepsilon_J}\ \ \ \varepsilon_J=\frac{\hbar^2}{2I}J\left(J+1\right)
 $$
 
 [返回目录](#0.0)
