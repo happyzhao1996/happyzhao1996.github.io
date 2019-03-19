@@ -23,4 +23,6 @@ $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若单个自旋的取值为$$1/2$$，则$$\vec{S_1}+\vec{S_2}$$的取值为$$1$$、$$0$$；
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若单个自旋的取值为$$1$$，则$$\vec{S_1}+\vec{S_2}$$的取值为$$2$$、$$1$$、$$0$$。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若单个自旋的取值为$$1$$，则$$\vec{S_1}+\vec{S_2}$$的取值为$$2$$、$$1$$、$$0$$
+
+* 
