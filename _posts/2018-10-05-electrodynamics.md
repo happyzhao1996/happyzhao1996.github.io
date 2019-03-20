@@ -28,14 +28,14 @@ description: 博资考中可能用到的电动力学公式
 * 库仑定律：
 
 $$
-F=\frac{QQ'}{4\pi\varepsilon_0r^2},\ \ \ \ \ \vec{F}=\frac{QQ'}{4\pi\varepsilon_0r^3}\vec{r}
+F=\frac{QQ'}{4\pi\varepsilon_0r^2},\ \ \ \ \ \vec{F\ }=\frac{QQ'}{4\pi\varepsilon_0r^3}\vec{r\ }
 $$
 
 * 电场强度：
 
 $$
-E=\sum_i\frac{Q_i}{4\pi\varepsilon_0r^2},\ \ \ \ \ \vec{E}=\sum_i\frac{Q_i\vec{r}_i}{4\pi\varepsilon_0r^3}\\\\
-\vec{E}\left(x\right)=\int_V\frac{\rho\left(\vec{x'}\right)\vec{r}}{4\pi\varepsilon_0r^3}\mathrm{d}V'
+E=\sum_i\frac{Q_i}{4\pi\varepsilon_0r^2},\ \ \ \ \ \vec{E\ }=\sum_i\frac{Q_i\vec{r_i}}{4\pi\varepsilon_0r^3}\\\\
+\vec{E\ }\left(x\right)=\int_V\frac{\rho\left(\vec{x'}\right)\vec{r\ }}{4\pi\varepsilon_0r^3}\mathrm{d}V'
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$x'$$、$$V'$$为表示源点，$$x$$表示场点
@@ -43,43 +43,43 @@ $$
 * 静电场的散度与高斯定理：
 
 $$
-\oint_S\vec{E}\cdot\mathrm{d}\vec{S}=\frac{Q}{\varepsilon_0}
+\oint_S\vec{E\ }\cdot\mathrm{d}\vec{S\ }=\frac{Q}{\varepsilon_0}
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$Q$$为高斯面所包围的总电荷，写成微分形式有
 
 $$
-\nabla\cdot\vec{E}=\frac{\rho}{\varepsilon_0}
+\nabla\cdot\vec{E\ }=\frac{\rho}{\varepsilon_0}
 $$
 
 * 静电场的旋度为零，即有
 
 $$
-\oint_L\cdot\mathrm{d}\vec{l}=0,\ \ \ \ \ \nabla\times\vec{E}=0
+\oint_L\cdot\mathrm{d}\vec{l\ }=0,\ \ \ \ \ \nabla\times\vec{E\ }=0
 $$
 
 * 通过任意曲面$$S$$的总电流可以表示为
 
 $$
-U=\int_S\vec{J}\cdot\mathrm{d}\vec{S}
+U=\int_S\vec{J\ }\cdot\mathrm{d}\vec{S\ }
 $$
 
 * 毕奥萨伐尔定律：
 
 $$
-\vec{B}\left(\vec{x}\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J}\left(x'\right)\times\vec{r}}{r^3}\mathrm{d}V'
+\vec{B\ }\left(\vec{x\ }\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J\ }\left(x'\right)\times\vec{r\ }}{r^3}\mathrm{d}V'
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于细导线，有
 
 $$
-\vec{B}\left(\vec{x}\right)=\frac{\mu_0}{4\pi}\oint\frac{I\mathrm{d}\vec{l}\times\vec{r}}{r^3}
+\vec{B\ }\left(\vec{x\ }\right)=\frac{\mu_0}{4\pi}\oint\frac{I\mathrm{d}\vec{l\ }\times\vec{r\ }}{r^3}
 $$
 
 * 磁场的环量和旋度：
 
 $$
-\oint_L\vec{B}\cdot\mathrm{d}\vec{l}=\mu_0I,\ \ \ \ \ \nabla\times\vec{B}=\mu_0\vec{J}
+\oint_L\vec{B\ }\cdot\mathrm{d}\vec{l\ }=\mu_0I,\ \ \ \ \ \nabla\times\vec{B\ }=\mu_0\vec{J\ }
 $$
 
 * 麦克斯韦方程组：
@@ -89,10 +89,10 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\oint_L\vec{E}\cdot\mathrm{d}\vec{l}=-\frac{\mathrm{d}}{\mathrm{d}t}\int_S\vec{B}\cdot\mathrm{d}\vec{S}\\\\
-&\oint_L\vec{H}\cdot\mathrm{d}\vec{l}=I_f+\frac{\mathrm{d}}{\mathrm{d}t}\int_S\vec{D}\cdot\mathrm{d}\vec{S}\\\\
-&\oint_S\vec{D}\cdot\mathrm{d}\vec{S}=Q_f\\\\
-&\oint_S\vec{B}\cdot\mathrm{d}\vec{S}=0
+&\oint_L\vec{E\ }\cdot\mathrm{d}\vec{l\ }=-\frac{\mathrm{d}}{\mathrm{d}t}\int_S\vec{B\ }\cdot\mathrm{d}\vec{S\ }\\\\
+&\oint_L\vec{H\ }\cdot\mathrm{d}\vec{l\ }=I_f+\frac{\mathrm{d}}{\mathrm{d}t}\int_S\vec{D\ }\cdot\mathrm{d}\vec{S\ }\\\\
+&\oint_S\vec{D\ }\cdot\mathrm{d}\vec{S\ }=Q_f\\\\
+&\oint_S\vec{B\ }\cdot\mathrm{d}\vec{S\ }=0
 \end{aligned}
 \right.
 $$
@@ -102,45 +102,45 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\\\\
-&\nabla\times\vec{H}=\vec{J}+\frac{\partial \vec{D}}{\partial t}\\\\
-&\nabla\cdot\vec{D}=\rho\\\\
-&\nabla\cdot\vec{B}=0
+&\nabla\times\vec{E\ }=-\frac{\partial \vec{B\ }}{\partial t}\\\\
+&\nabla\times\vec{H\ }=\vec{J\ }+\frac{\partial \vec{D\ }}{\partial t}\\\\
+&\nabla\cdot\vec{D\ }=\rho\\\\
+&\nabla\cdot\vec{B\ }=0
 \end{aligned}
 \right.
 $$
 
-* 介质的电极化：电极化强度矢量$$\vec{P}=\chi_e\varepsilon_0\vec{E}$$，电位移矢量$$\vec{D}=\varepsilon_0\vec{E}+\vec{P}=\varepsilon\vec{E}$$，其中
+* 介质的电极化：电极化强度矢量$$\vec{P\ }=\chi_e\varepsilon_0\vec{E\ }$$，电位移矢量$$\vec{D\ }=\varepsilon_0\vec{E\ }+\vec{P\ }=\varepsilon\vec{E\ }$$，其中
 
 $$
 \varepsilon=\varepsilon_r\varepsilon_0,\ \ \ \ \ \varepsilon_r=1+\chi_e
 $$
 
-* 介质的磁化：磁化强度$$\vec{M}=\chi_M\vec{H}$$，磁场强度$$\vec{H}=\vec{B}/\mu_0-\vec{M}$$即$$\vec{B}=\mu_0\left(\vec{H}+\vec{M}\right)=\mu\vec{H}$$，其中
+* 介质的磁化：磁化强度$$\vec{M\ }=\chi_M\vec{H\ }$$，磁场强度$$\vec{H\ }=\vec{B\ }/\mu_0-\vec{M\ }$$即$$\vec{B\ }=\mu_0\left(\vec{H\ }+\vec{M\ }\right)=\mu\vec{H\ }$$，其中
 
 $$
 \mu=\mu_0\mu_r,\ \ \ \ \ \mu_r=1+\chi_M
 $$
 
-* 电流密度与电场强度的关系为$$\vec{J}=\sigma\vec{E}$$
+* 电流密度与电场强度的关系为$$\vec{J\ }=\sigma\vec{E\ }$$
 
-* 电场强度$$\vec{E}$$的切向连续，磁感应强度$$\vec{B}$$的法向连续。其它边值关系有
+* 电场强度$$\vec{E\ }$$的切向连续，磁感应强度$$\vec{B\ }$$的法向连续。其它边值关系有
 
 $$
 \left\{
 \begin{aligned}
-\vec{e}_n\times\left(\vec{E}_2-\vec{E}_1\right)&=0\\\\
-\vec{e}_n\times\left(\vec{H}_2-\vec{H}_1\right)&=\vec{\alpha}\\\\
-\vec{e}_n\cdot\left(\vec{D}_2-\vec{D}_1\right)&=\sigma\\\\
-\vec{e}_n\cdot\left(\vec{B}_2-\vec{B}_1\right)&=0
+\vec{e_n}\times\left(\vec{E_2}-\vec{E_1}\right)&=0\\\\
+\vec{e_n}\times\left(\vec{H_2}-\vec{H_1}\right)&=\vec{\alpha}\\\\
+\vec{e_n}\cdot\left(\vec{D_2}-\vec{D_1}\right)&=\sigma\\\\
+\vec{e_n}\cdot\left(\vec{B_2}-\vec{B_1}\right)&=0
 \end{aligned}
 \right.
 $$
 
-* 电偶极子是一对间距为$$l$$、电荷量为$$q$$的点电荷，可由$$\vec{p}=q\vec{l}$$来表示。位于$$\vec{r_0}$$处的电偶极子在$$\vec{r}$$处产生的电势为
+* 电偶极子是一对间距为$$l$$、电荷量为$$q$$的点电荷，可由$$\vec{p\ }=q\vec{l}$$来表示。位于$$\vec{r_0}$$处的电偶极子在$$\vec{r\ }$$处产生的电势为
 
 $$
-\varphi=\frac{1}{4\pi\varepsilon_0}\frac{\vec{p}\cdot\left(\vec{r}-\vec{r}_0\right)}{\left|\vec{r}-\vec{r}_0\right|^3}
+\varphi=\frac{1}{4\pi\varepsilon_0}\frac{\vec{p\ }\cdot\left(\vec{r\ }-\vec{r_0}\right)}{\left|\vec{r\ }-\vec{r_0}\right|^3}
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电偶极子从负电荷指向正电荷的方向为电偶极子的方向
@@ -153,7 +153,7 @@ $$
 
 [返回目录](#0.0)
 
-* 静电场是无旋的，因此可以引入一个标势$$\varphi$$来描述静电场，有$$\vec{E}=-\nabla\varphi$$
+* 静电场是无旋的，因此可以引入一个标势$$\varphi$$来描述静电场，有$$\vec{E\ }=-\nabla\varphi$$
 
 * 对于点电荷，其空间电势为（若取无穷远处为势能零点）
 
@@ -164,7 +164,7 @@ $$
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于连续分布的带电体，其空间电势为（若取无穷远处为势能零点）
 
 $$
-\varphi\left(\vec{x}\right)=\int_V\frac{\rho\left(\vec{x}'\right)\mathrm{d}V'}{4\pi\varepsilon_0r}
+\varphi\left(\vec{x\ }\right)=\int_V\frac{\rho\left(\vec{x'}\right)\mathrm{d}V'}{4\pi\varepsilon_0r}
 $$
 
 * 导体内部不带静电荷；导体内部电场为零；导体表面为等势面
@@ -228,19 +228,19 @@ $$
 * 磁矢势
 
 $$
-\vec{A}\left(\vec{x}\right)=\frac{\mu}{4\pi}\int_V\frac{\vec{J}\left(\vec{x}'\right)\mathrm{d}V'}{r}=\frac{\mu}{4\pi}\int_l\frac{I\mathrm{d}\vec{l}}{r}
+\vec{A\ }\left(\vec{x\ }\right)=\frac{\mu}{4\pi}\int_V\frac{\vec{J\ }\left(\vec{x'}\right)\mathrm{d}V'}{r}=\frac{\mu}{4\pi}\int_l\frac{I\mathrm{d}\vec{l}}{r}
 $$
 
-* 磁感应强度$$\vec{B}$$和磁矢势$$\vec{A}$$的关系为
+* 磁感应强度$$\vec{B\ }$$和磁矢势$$\vec{A\ }$$的关系为
 
 $$
-\vec{B}=\nabla\times\vec{A}
+\vec{B\ }=\nabla\times\vec{A\ }
 $$
 
-* 在没有电流元的地方，可以引入磁标势，则磁场强度可以表示为$$\vec{H}=-\nabla\varphi_m$$，有
+* 在没有电流元的地方，可以引入磁标势，则磁场强度可以表示为$$\vec{H\ }=-\nabla\varphi_m$$，有
 
 $$
-\mathrm{d}\varphi_m=\frac{\mathrm{d}\vec{m}\cdot\vec{r}}{4\pi r^3}=\frac{I}{4\pi}\frac{\vec{r}\cdot\mathrm{d}\vec{S}'}{r^3}=\frac{I}{4\pi}\mathrm{d}\Omega
+\mathrm{d}\varphi_m=\frac{\mathrm{d}\vec{m\ }\cdot\vec{r\ }}{4\pi r^3}=\frac{I}{4\pi}\frac{\vec{r\ }\cdot\mathrm{d}\vec{S\ }'}{r^3}=\frac{I}{4\pi}\mathrm{d}\Omega
 $$
 
 [返回目录](#0.0)
@@ -251,15 +251,15 @@ $$
 
 [返回目录](#0.0)
 
-* 在真空中，若设电流密度$$\vec{J}$$和电荷密度$$\rho$$为$$0$$，则麦克斯韦方程组可以表示为
+* 在真空中，若设电流密度$$\vec{J\ }$$和电荷密度$$\rho$$为$$0$$，则麦克斯韦方程组可以表示为
 
 $$
 \left\{
 \begin{aligned}
-&\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\\\\
-&\nabla\times\vec{H}=\frac{\partial \vec{D}}{\partial t}\\\\
-&\nabla\cdot\vec{D}=0\\\\
-&\nabla\cdot\vec{B}=0
+&\nabla\times\vec{E\ }=-\frac{\partial \vec{B\ }}{\partial t}\\\\
+&\nabla\times\vec{H\ }=\frac{\partial \vec{D\ }}{\partial t}\\\\
+&\nabla\cdot\vec{D\ }=0\\\\
+&\nabla\cdot\vec{B\ }=0
 \end{aligned}
 \right.
 $$
@@ -269,8 +269,8 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\nabla^2\vec{E}-\mu_0\varepsilon_0\frac{\partial^2\vec{E}}{\partial t^2}=\nabla^2\vec{E}-\frac{1}{c^2}\frac{\partial^2\vec{E}}{\partial t^2}=0\\\\
-&\nabla^2\vec{B}-\mu_0\varepsilon_0\frac{\partial^2\vec{B}}{\partial t^2}=\nabla^2\vec{B}-\frac{1}{c^2}\frac{\partial^2\vec{B}}{\partial t^2}=0
+&\nabla^2\vec{E\ }-\mu_0\varepsilon_0\frac{\partial^2\vec{E\ }}{\partial t^2}=\nabla^2\vec{E\ }-\frac{1}{c^2}\frac{\partial^2\vec{E\ }}{\partial t^2}=0\\\\
+&\nabla^2\vec{B\ }-\mu_0\varepsilon_0\frac{\partial^2\vec{B\ }}{\partial t^2}=\nabla^2\vec{B\ }-\frac{1}{c^2}\frac{\partial^2\vec{B\ }}{\partial t^2}=0
 \end{aligned}
 \right.
 $$
@@ -278,8 +278,8 @@ $$
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中利用了公式
 
 $$
-\nabla\times\left(\nabla\times\vec{E}\right)=\nabla\left(\nabla\cdot\vec{E}\right)-\nabla^2\vec{E}=-\nabla^2\vec{E}\\\\
-\nabla\times\left(\nabla\times\vec{B}\right)=\nabla\left(\nabla\cdot\vec{B}\right)-\nabla^2\vec{B}=-\nabla^2\vec{B}
+\nabla\times\left(\nabla\times\vec{E\ }\right)=\nabla\left(\nabla\cdot\vec{E\ }\right)-\nabla^2\vec{E\ }=-\nabla^2\vec{E\ }\\\\
+\nabla\times\left(\nabla\times\vec{B\ }\right)=\nabla\left(\nabla\cdot\vec{B\ }\right)-\nabla^2\vec{B\ }=-\nabla^2\vec{B\ }
 $$
 
 * 考虑角频率为$$\omega$$的电磁波，则其电场和磁场可以表示为
@@ -287,8 +287,8 @@ $$
 $$
 \left\{
 \begin{aligned}
-\vec{E}\left(\vec{x},t\right)&=\vec{E}\left(x\right)\mathrm{e}^{-i\omega t}\\\\
-\vec{B}\left(\vec{x},t\right)&=\vec{B}\left(x\right)\mathrm{e}^{-i\omega t}
+\vec{E\ }\left(\vec{x\ },t\right)&=\vec{E\ }\left(x\right)\mathrm{e}^{-i\omega t}\\\\
+\vec{B\ }\left(\vec{x\ },t\right)&=\vec{B\ }\left(x\right)\mathrm{e}^{-i\omega t}
 \end{aligned}
 \right.
 $$
@@ -298,10 +298,10 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\nabla\times\vec{E}=i\omega\mu\vec{H}\\\\
-&\nabla\times\vec{H}=-i\omega\varepsilon\vec{E}\\\\
-&\nabla\cdot\vec{E}=0\\\\
-&\nabla\cdot\vec{H}=0
+&\nabla\times\vec{E\ }=i\omega\mu\vec{H\ }\\\\
+&\nabla\times\vec{H\ }=-i\omega\varepsilon\vec{E\ }\\\\
+&\nabla\cdot\vec{E\ }=0\\\\
+&\nabla\cdot\vec{H\ }=0
 \end{aligned}
 \right.
 $$
@@ -309,13 +309,13 @@ $$
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联立1、2式有
 
 $$
-\nabla\times\left(\nabla\times\vec{E}\right)=\omega^2\mu\varepsilon\vec{E}\Leftrightarrow\nabla^2\vec{E}+k^2\vec{E}=0
+\nabla\times\left(\nabla\times\vec{E\ }\right)=\omega^2\mu\varepsilon\vec{E\ }\Leftrightarrow\nabla^2\vec{E\ }+k^2\vec{E\ }=0
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$k=\omega\sqrt{\mu\varepsilon}$$。解出$$\vec{E}$$后，$$\vec{B}$$可以表示为
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$k=\omega\sqrt{\mu\varepsilon}$$。解出$$\vec{E\ }$$后，$$\vec{B\ }$$可以表示为
 
 $$
-\vec{B}=-\frac{i}{k}\sqrt{\mu\varepsilon}\nabla\times\vec{E}
+\vec{B\ }=-\frac{i}{k}\sqrt{\mu\varepsilon}\nabla\times\vec{E\ }
 $$
 
 * 考虑平面电磁波的表达式
@@ -323,35 +323,35 @@ $$
 $$
 \left\{
 \begin{aligned}
-\vec{E}\left(\vec{x},t\right)&=\vec{E}_0\mathrm{e}^{i\left(\vec{k}\cdot\vec{x}-\omega t\right)}\\\\
-\vec{B}\left(\vec{x},t\right)&=\vec{B}_0\mathrm{e}^{i\left(\vec{k}\cdot\vec{x}-\omega t\right)}
+\vec{E\ }\left(\vec{x\ },t\right)&=\vec{E_0}\mathrm{e}^{i\left(\vec{k\ }\cdot\vec{x\ }-\omega t\right)}\\\\
+\vec{B\ }\left(\vec{x\ },t\right)&=\vec{B_0}\mathrm{e}^{i\left(\vec{k\ }\cdot\vec{x\ }-\omega t\right)}
 \end{aligned}
 \right.
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;则$$\vec{B}$$与$$\vec{E}$$的关系为
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;则$$\vec{B\ }$$与$$\vec{E\ }$$的关系为
 
 $$
-\vec{B}=-\frac{i}{k}\sqrt{\mu\varepsilon}\nabla\times\vec{E}=\sqrt{\mu\varepsilon}\frac{\vec{k}}{k}\times\vec{E}=\sqrt{\mu\varepsilon}\vec{e}_k\times\vec{E}=\frac{1}{v}\vec{e}_k\times\vec{E}
+\vec{B\ }=-\frac{i}{k}\sqrt{\mu\varepsilon}\nabla\times\vec{E\ }=\sqrt{\mu\varepsilon}\frac{\vec{k\ }}{k}\times\vec{E\ }=\sqrt{\mu\varepsilon}\vec{e_k}\times\vec{E\ }=\frac{1}{v}\vec{e_k}\times\vec{E\ }
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因此平面电磁波电场与磁场的振幅比为
 
 $$
-\left|\frac{\vec{E}}{\vec{B}}\right|=\frac{1}{\sqrt{\mu\varepsilon}}=v\\\\
-\left|\frac{\vec{E}}{\vec{B}}\right|=\frac{1}{\sqrt{\mu_0\varepsilon_0}}=c
+\left|\frac{\vec{E\ }}{\vec{B\ }}\right|=\frac{1}{\sqrt{\mu\varepsilon}}=v\\\\
+\left|\frac{\vec{E\ }}{\vec{B\ }}\right|=\frac{1}{\sqrt{\mu_0\varepsilon_0}}=c
 $$
 
-* 电磁波在介质界面处会发生折射和反射。设电磁波沿$$z$$方向从介质1入射到介质2，二者的相对介电常数分别为$$\varepsilon_1$$和$$\varepsilon_2$$，介质光速分别为$$v_1$$和$$v_2$$，电磁波入射角、反射角和折射角分别为$$\theta_0$$、$$\theta_1$$和$$\theta_2$$，则由于电场强度$$\vec{E}$$在界面处的切向分量连续，有
+* 电磁波在介质界面处会发生折射和反射。设电磁波沿$$z$$方向从介质1入射到介质2，二者的相对介电常数分别为$$\varepsilon_1$$和$$\varepsilon_2$$，介质光速分别为$$v_1$$和$$v_2$$，电磁波入射角、反射角和折射角分别为$$\theta_0$$、$$\theta_1$$和$$\theta_2$$，则由于电场强度$$\vec{E\ }$$在界面处的切向分量连续，有
 
 $$
-\vec{e}_n\times\left(\vec{E}_0\mathrm{e}^{i\vec{k}_0\cdot\vec{r}}+\vec{E}_1\mathrm{e}^{i\vec{k}_2\cdot\vec{r}}\right)=\vec{e}_n\times\vec{E}_2\mathrm{e}^{i\vec{k}_2\cdot\vec{r}}
+\vec{e_n}\times\left(\vec{E_0}\mathrm{e}^{i\vec{k_0}\cdot\vec{r\ }}+\vec{E_1}\mathrm{e}^{i\vec{k_2}\cdot\vec{r\ }}\right)=\vec{e_n}\times\vec{E_2}\mathrm{e}^{i\vec{k_2}\cdot\vec{r\ }}
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于$$\vec{r}$$的任意性，上式成立的条件是
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于$$\vec{r\ }$$的任意性，上式成立的条件是
 
 $$
-\vec{k}_0\cdot\vec{r}=\vec{k}_1\cdot\vec{r}=\vec{k}_2\cdot\vec{r}
+\vec{k_0}\cdot\vec{r\ }=\vec{k_1}\cdot\vec{r\ }=\vec{k_2}\cdot\vec{r\ }
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设电场在$$y$$方向无分量，则上式等价于
@@ -380,7 +380,7 @@ $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此即为反射与折射的波矢和角度关系
 
-* 下面考虑入射波、反射波和折射波的振幅，假定界面自由电流密度为$$0$$时。当$$\vec{E}$$垂直于入射面，$$\vec{H}$$平行于入射面时，有
+* 下面考虑入射波、反射波和折射波的振幅，假定界面自由电流密度为$$0$$时。当$$\vec{E\ }$$垂直于入射面，$$\vec{H\ }$$平行于入射面时，有
 
 $$
 E_0+E_1=E_2\\\\
@@ -404,7 +404,7 @@ $$
 \right.
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当$$\vec{H}$$垂直于入射面，$$\vec{E}$$平行于入射面时，有
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当$$\vec{H\ }$$垂直于入射面，$$\vec{E\ }$$平行于入射面时，有
 
 $$
 H_0+H_1=H_2\\\\
@@ -428,28 +428,28 @@ $$
 \right.
 $$
 
-* 在导体中应用麦克斯韦方程组$$\nabla\cdot\vec{D}=\rho$$，可得到导体中电荷密度与电场的微分方程为
+* 在导体中应用麦克斯韦方程组$$\nabla\cdot\vec{D\ }=\rho$$，可得到导体中电荷密度与电场的微分方程为
 
 $$
-\varepsilon\nabla\cdot\vec{E}=\rho
+\varepsilon\nabla\cdot\vec{E\ }=\rho
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结合微分形式欧姆定律$$\vec{J}=\sigma\vec{E}$$，可以得到
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结合微分形式欧姆定律$$\vec{J\ }=\sigma\vec{E\ }$$，可以得到
 
 $$
-\nabla\cdot\vec{J}=\frac{\sigma}{\varepsilon}\rho
+\nabla\cdot\vec{J\ }=\frac{\sigma}{\varepsilon}\rho
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而由于电荷密度的变化与电流密度满足关系
 
 $$
-\frac{\partial \rho}{\partial t}=-\nabla\cdot\vec{J}
+\frac{\partial \rho}{\partial t}=-\nabla\cdot\vec{J\ }
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有
 
 $$
-\frac{\partial \rho}{\partial t}=-\nabla\cdot\vec{J}=-\frac{\sigma}{\varepsilon}\rho
+\frac{\partial \rho}{\partial t}=-\nabla\cdot\vec{J\ }=-\frac{\sigma}{\varepsilon}\rho
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;求解此微分方程，可以得到
@@ -465,10 +465,10 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\\\\
-&\nabla\times\vec{H}=\vec{J}+\frac{\partial \vec{D}}{\partial t}\\\\
-&\nabla\cdot\vec{D}=0\\\\
-&\nabla\cdot\vec{B}=0
+&\nabla\times\vec{E\ }=-\frac{\partial \vec{B\ }}{\partial t}\\\\
+&\nabla\times\vec{H\ }=\vec{J\ }+\frac{\partial \vec{D\ }}{\partial t}\\\\
+&\nabla\cdot\vec{D\ }=0\\\\
+&\nabla\cdot\vec{B\ }=0
 \end{aligned}
 \right.
 $$
@@ -476,7 +476,7 @@ $$
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于一频率为$$\omega$$的电磁波，可令
 
 $$
-\vec{D}=\varepsilon\vec{E},\ \ \ \ \ \vec{B}=\mu\vec{H}
+\vec{D\ }=\varepsilon\vec{E\ },\ \ \ \ \ \vec{B\ }=\mu\vec{H\ }
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;则麦克斯韦方程组等价于
@@ -484,10 +484,10 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\nabla\times\vec{E}=i\omega\mu\vec{H}\\\\
-&\nabla\times\vec{H}=-i\omega\varepsilon\vec{E}+\sigma\vec{E}\\\\
-&\nabla\cdot\vec{E}=0\\\\
-&\nabla\cdot\vec{H}=0
+&\nabla\times\vec{E\ }=i\omega\mu\vec{H\ }\\\\
+&\nabla\times\vec{H\ }=-i\omega\varepsilon\vec{E\ }+\sigma\vec{E\ }\\\\
+&\nabla\cdot\vec{E\ }=0\\\\
+&\nabla\cdot\vec{H\ }=0
 \end{aligned}
 \right.
 $$
@@ -523,30 +523,30 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\\\\
-&\nabla\times\vec{H}=\vec{J}+\frac{\partial \vec{D}}{\partial t}\\\\
-&\nabla\cdot\vec{D}=\rho\\\\
-&\nabla\cdot\vec{B}=0
+&\nabla\times\vec{E\ }=-\frac{\partial \vec{B\ }}{\partial t}\\\\
+&\nabla\times\vec{H\ }=\vec{J\ }+\frac{\partial \vec{D\ }}{\partial t}\\\\
+&\nabla\cdot\vec{D\ }=\rho\\\\
+&\nabla\cdot\vec{B\ }=0
 \end{aligned}
 \right.
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于$$\vec{B}$$是无源的，可以引入磁矢势$$\vec{A}$$，有$$\vec{B}=\nabla\times\vec{A}$$。代入1式，则有
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于$$\vec{B\ }$$是无源的，可以引入磁矢势$$\vec{A\ }$$，有$$\vec{B\ }=\nabla\times\vec{A\ }$$。代入1式，则有
 
 $$
-\nabla\times\vec{E}=-\nabla\times\frac{\partial\vec{A}}{\partial t}\Leftrightarrow\nabla\times\left(\vec{E}+\frac{\partial\vec{A}}{\partial t}\right)=0
+\nabla\times\vec{E\ }=-\nabla\times\frac{\partial\vec{A\ }}{\partial t}\Leftrightarrow\nabla\times\left(\vec{E\ }+\frac{\partial\vec{A\ }}{\partial t}\right)=0
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说明括号内的矢量为无旋的，因此可以用标势的负梯度来描述：
 
 $$
-\vec{E}+\frac{\partial\vec{A}}{\partial t}=-\nabla\varphi
+\vec{E\ }+\frac{\partial\vec{A\ }}{\partial t}=-\nabla\varphi
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因此电场可以表示为
 
 $$
-\vec{E}=-\nabla\varphi-\frac{\partial \vec{A}}{\partial t}
+\vec{E\ }=-\nabla\varphi-\frac{\partial \vec{A\ }}{\partial t}
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此处的$$\varphi$$不再是传统意义上的电势
@@ -554,56 +554,56 @@ $$
 * 推迟势公式为
 
 $$
-\vec{A}\left(\vec{x},t\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J}\left(\vec{x}',t-\frac{r}{c}\right)}{r}\mathrm{d}V'
+\vec{A\ }\left(\vec{x\ },t\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J\ }\left(\vec{x'},t-\frac{r}{c}\right)}{r}\mathrm{d}V'
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若电流$$\vec{J}$$是一定频率的交变电流，即有
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若电流$$\vec{J\ }$$是一定频率的交变电流，即有
 
 $$
-\vec{J}\left(\vec{x}',t\right)=\vec{J}\left(x'\right)\mathrm{e}^{-i\omega t}
+\vec{J\ }\left(\vec{x'},t\right)=\vec{J\ }\left(x'\right)\mathrm{e}^{-i\omega t}
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;结合上述两式，有
 
 $$
-\vec{A}\left(\vec{x},t\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J}\left(x'\right)\mathrm{e}^{i\left(kr-\omega t\right)}}{r}\mathrm{d}V'
+\vec{A\ }\left(\vec{x\ },t\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J\ }\left(x'\right)\mathrm{e}^{i\left(kr-\omega t\right)}}{r}\mathrm{d}V'
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若令
 
 $$
-\vec{A}\left(\vec{x},t\right)=\vec{A}\left(\vec{x}\right)\mathrm{e}^{-i\omega t}
+\vec{A\ }\left(\vec{x\ },t\right)=\vec{A\ }\left(\vec{x\ }\right)\mathrm{e}^{-i\omega t}
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;则有
 
 $$
-\vec{A}\left(\vec{x}\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J}\left(x'\right)\mathrm{e}^{ikr}}{r}\mathrm{d}V'
+\vec{A\ }\left(\vec{x\ }\right)=\frac{\mu_0}{4\pi}\int_V\frac{\vec{J\ }\left(x'\right)\mathrm{e}^{ikr}}{r}\mathrm{d}V'
 $$
 
 * 电偶极辐射：将推迟势展开，则第一项可以表示为
 
 $$
-\vec{A}\left(\vec{x}\right)=\frac{\mu_0\mathrm{e}^{ikR}}{4\pi R}\int_V\vec{J}\left(\vec{x}'\right)\mathrm{d}V'
+\vec{A\ }\left(\vec{x\ }\right)=\frac{\mu_0\mathrm{e}^{ikR}}{4\pi R}\int_V\vec{J\ }\left(\vec{x'}\right)\mathrm{d}V'
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设电流密度表示为$$\vec{J}=\sum_i n_iq_i\vec{v}_i$$，则有
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;设电流密度表示为$$\vec{J\ }=\sum_i n_iq_i\vec{v}_i$$，则有
 
 $$
-\int_V\vec{J}\left(\vec{x}'\right)\mathrm{d}V'=\sum_iq_i\vec{v}_i=\frac{\mathrm{d}}{\mathrm{d}t}\sum q_i\vec{x}_i=\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}=\dot{\vec{p}}
+\int_V\vec{J\ }\left(\vec{x'}\right)\mathrm{d}V'=\sum_iq_i\vec{v}_i=\frac{\mathrm{d}}{\mathrm{d}t}\sum q_i\vec{x_i}=\frac{\mathrm{d}\vec{p\ }}{\mathrm{d}t}=\dot{\vec{p\ }}
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$p$$为电偶极矩，因此推迟势的第一项代表振荡电偶极矩产生的辐射，即有
 
 $$
-\vec{A}\left(\vec{x}\right)=\frac{\mu_0\mathrm{e}^{ikR}}{4\pi R}\dot{\vec{p}}
+\vec{A\ }\left(\vec{x\ }\right)=\frac{\mu_0\mathrm{e}^{ikR}}{4\pi R}\dot{\vec{p\ }}
 $$
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;算符$$\nabla$$作用时，仅需对相因子作用，即有
 
 $$
 \begin{aligned}
-&\nabla\rightarrow ik\vec{e}_R\\\\
+&\nabla\rightarrow ik\vec{e_R}\\\\
 &\frac{\partial}{\partial t}\rightarrow -i\omega
 \end{aligned}
 $$
@@ -613,8 +613,8 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\vec{B}=\nabla\times\vec{A}=\frac{i\mu_0k}{4\pi R}\mathrm{e}^{ikR}\vec{e}_R\times\dot{\vec{p}}=\frac{\mathrm{e}^{ikR}}{4\pi\varepsilon_0 c^3R}\ddot{\vec{p}}\times\vec{e}_R\\\\
-&\vec{E}=\frac{ic}{k}\nabla\times\vec{B}=c\vec{B}\times\vec{e}_R=\frac{\mathrm{e}^{ikR}}{4\pi\varepsilon_0 c^2R}\left(\ddot{\vec{p}}\times\vec{e}_R\right)\times\vec{e}_R
+&\vec{B\ }=\nabla\times\vec{A\ }=\frac{i\mu_0k}{4\pi R}\mathrm{e}^{ikR}\vec{e_R}\times\dot{\vec{p\ }}=\frac{\mathrm{e}^{ikR}}{4\pi\varepsilon_0 c^3R}\ddot{\vec{p\ }}\times\vec{e_R}\\\\
+&\vec{E\ }=\frac{ic}{k}\nabla\times\vec{B\ }=c\vec{B\ }\times\vec{e_R}=\frac{\mathrm{e}^{ikR}}{4\pi\varepsilon_0 c^2R}\left(\ddot{\vec{p\ }}\times\vec{e_R}\right)\times\vec{e_R}
 \end{aligned}
 \right.
 $$
@@ -624,8 +624,8 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\vec{B}=\frac{1}{4\pi\varepsilon_0 c^3R}\ddot{\vec{p}}\mathrm{e}^{ikR}\sin\theta\vec{e}_\varphi\\\\
-&\vec{E}=\frac{1}{4\pi\varepsilon_0 c^2R}\ddot{\vec{p}}\mathrm{e}^{ikR}\sin\theta\vec{e}_\theta
+&\vec{B\ }=\frac{1}{4\pi\varepsilon_0 c^3R}\ddot{\vec{p\ }}\mathrm{e}^{ikR}\sin\theta\vec{e_\varphi}\\\\
+&\vec{E\ }=\frac{1}{4\pi\varepsilon_0 c^2R}\ddot{\vec{p\ }}\mathrm{e}^{ikR}\sin\theta\vec{e_\theta}
 \end{aligned}
 \right.
 $$
@@ -633,7 +633,7 @@ $$
 * 电偶极辐射的总辐射功率为
 
 $$
-P=\frac{1}{4\pi\varepsilon_0}\frac{\left|\ddot{\vec{p}}\right|^2}{3c^3}
+P=\frac{1}{4\pi\varepsilon_0}\frac{\left|\ddot{\vec{p\ }}\right|^2}{3c^3}
 $$
 
 * 磁偶极辐射的电场、磁场可以表示为
@@ -641,8 +641,8 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\vec{B}=\frac{\mu_0\mathrm{e}^{ikR}}{4\pi c^2R}\left(\ddot{\vec{m}}\times\vec{e}_R\right)\times\vec{e}_{R}\\\\
-&\vec{E}=c\vec{B}\times\vec{e}_{R}=-\frac{\mu_0\mathrm{e}^{ikR}}{4\pi cR}\left(\ddot{\vec{m}}\times\vec{e}_R\right)
+&\vec{B\ }=\frac{\mu_0\mathrm{e}^{ikR}}{4\pi c^2R}\left(\ddot{\vec{m\ }}\times\vec{e_R}\right)\times\vec{e_{}R}\\\\
+&\vec{E\ }=c\vec{B\ }\times\vec{e_{}R}=-\frac{\mu_0\mathrm{e}^{ikR}}{4\pi cR}\left(\ddot{\vec{m\ }}\times\vec{e_R}\right)
 \end{aligned}
 \right.
 $$
@@ -650,19 +650,19 @@ $$
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;总辐射功率为
 
 $$
-P=\frac{\mu_0\omega^4\left|\vec{m}\right|^2}{12\pi c^3}
+P=\frac{\mu_0\omega^4\left|\vec{m\ }\right|^2}{12\pi c^3}
 $$
 
 * 电磁波的平均辐射功率为
 
 $$
-\bar{\vec{S}}=\frac{1}{2}\mathrm{Re}\left(\vec{E}^*\times\vec{H}\right)
+\bar{\vec{S\ }}=\frac{1}{2}\mathrm{Re}\left(\vec{E\ }^*\times\vec{H\ }\right)
 $$
 
 * 电磁场的动量密度为
 
 $$
-\vec{g}=\varepsilon_0\vec{E}\times\vec{B}=\frac{1}{c^2}\vec{S}
+\vec{g\ }=\varepsilon_0\vec{E\ }\times\vec{B\ }=\frac{1}{c^2}\vec{S\ }
 $$
 
 
@@ -675,13 +675,13 @@ $$
 * 电偶极辐射的能流密度为
 
 $$
-\bar{\vec{S}}=\frac{\mu_0\left|\ddot{\vec{p}}\right|^2}{32\pi^2c^3R^2}\sin^2\theta\vec{e}_R
+\bar{\vec{S\ }}=\frac{\mu_0\left|\ddot{\vec{p\ }}\right|^2}{32\pi^2c^3R^2}\sin^2\theta\vec{e_R}
 $$
 
 * 磁偶极辐射的能流密度为
 
 $$
-\bar{\vec{S}}=\frac{\mu_0\omega^4\left|\vec{m}\right|^2}{32\pi^2c^3R^2}\sin^2\theta\vec{e}_R
+\bar{\vec{S\ }}=\frac{\mu_0\omega^4\left|\vec{m\ }\right|^2}{32\pi^2c^3R^2}\sin^2\theta\vec{e_R}
 $$
 
 [返回目录](#0.0)
