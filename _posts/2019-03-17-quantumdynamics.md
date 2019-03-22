@@ -16,7 +16,10 @@ description: 博资考中可能用到的量子力学原理与公式
 * [1.关于粒子的散射](#1.0)
 * [2.关于一维谐振子](#2.0)
 * [3.一维谐振子的坐标表象](#3.0)
-* [10.其它一琐碎的项](#10.0)
+* [4.关于有限深方势阱](#4.0)
+* [5.关于自旋](#5.0)
+* [6.关于微扰](#6.0)
+* [7.其它一琐碎的项](#7.0)
 
 ---
 
@@ -166,9 +169,169 @@ $$
 
 ---
 
-### <h02 id='2.0'>10.其它一些琐碎的项</h02>
+### <h04 id='4.0'>4.关于有限深方势阱</h04>
 
 [返回目录](#0.0)
+
+* 设能量为$$E$$，势阱范围为$$\left[-a/2,a/2\right]$$，势阱内能势能为$$0$$，势阱外势能为$$V$$
+
+* 在坐标表象下进行研究。写出薛定谔方程为
+
+$$
+\hat{H}\psi=E\psi
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于在坐标表象下，哈密顿量可以表示为
+
+$$
+\hat{H}=\frac{\hat{p}^2}{2m}+V\left(x\right)
+$$
+
+$$
+\hat{p}=-i\hbar\frac{\partial}{\partial x}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因此薛定谔方程可以表示为
+
+$$
+-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\psi\left(x\right)+V\left(x\right)\psi\left(x\right)=E\psi\left(x\right)
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以变形为
+
+$$
+\ddot{\psi}\left(x\right)+\frac{2m\left[E-V\left(x\right)\right]}{\hbar^2}\psi\left(x\right)=0
+$$
+
+* 当$$x\in\left[-a/2,a/2\right]$$时，有$$V\left(x\right)=0$$，即哈密顿方程变为
+
+$$
+\ddot{\psi}\left(x\right)+\frac{2mE}{\hbar^2}\psi\left(x\right)=0
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此时令$$k^2=2mE/\hbar^2$$，则有
+
+$$
+\ddot{\psi}\left(x\right)+k^2\psi\left(x\right)=0
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可解得
+
+$$
+\left\{
+\begin{aligned}
+\psi_1\left(x\right)&=A\cos kx\\
+\psi_2\left(x\right)&=B\sin kx
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分别对应偶宇称和奇宇称。根据积分可以确定归一化系数，得到
+
+$$
+\left\{
+\begin{aligned}
+\psi_1\left(x\right)&=\sqrt{\frac{2}{a}}\cos kx\\
+\psi_2\left(x\right)&=\sqrt{\frac{2}{a}}\sin kx
+\end{aligned}
+\right.
+$$
+
+* 当$$x\notin\left[-a/2,a/2\right]$$时，有$$V\left(x\right)=V$$，即哈密顿方程变为
+
+$$
+\ddot{\psi}\left(x\right)-\frac{2m\left(V-E\right)}{\hbar^2}\psi\left(x\right)=0
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若$$V>E$$，则可令$$\beta^2=2m\left(V-E\right)/\hbar^2$$，则有
+
+$$
+\ddot{\psi}\left(x\right)-\beta^2\psi\left(x\right)=0
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可解得
+
+$$
+\left\{
+\begin{aligned}
+\psi_-\left(x\right)&=C\mathrm{e}^{i\beta x}\\
+\psi_+\left(x\right)&=D\mathrm{e}^{-i\beta x}
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$C$$和$$D$$的值可以通过势场突变处波函数及其导数连续的条件求得
+
+[返回目录](#0.0)
+
+---
+
+### <h05 id='5.0'>5.关于自旋</h05>
+
+[返回目录](#0.0)
+
+* 在$$S_z$$表象下，泡利矩阵可以表示为
+
+$$
+\sigma_x=
+\begin{pmatrix}
+0 & 1\\
+1 & 0
+\end{pmatrix}
+,\ \ \ 
+\sigma_y=
+\begin{pmatrix}
+0 & -i\\
+i & 0
+\end{pmatrix}
+,\ \ \ 
+\sigma_z=
+\begin{pmatrix}
+1 & 0\\
+0 & -1
+\end{pmatrix}
+$$
+
+* 自旋与泡利矩阵的关系为$$S_i=\hbar\sigma_i/2$$
+
+* 首先写出哈密顿量和薛定谔方程，然后一般都是**在$$S_z$$表象下用矩阵进行运算**
+
+* 考虑两个自旋的时候，使用耦合表象可能会简单一些
+
+[返回目录](#0.0)
+
+---
+
+### <h06 id='6.0'>6.关于微扰</h06>
+
+[返回目录](#0.0)
+
+* 对于非简并态微扰，首先使用常规的流程和原始哈密顿量$$\hat{H}_0$$计算得到体系的基态能量$$E_0$$和基态波函数
+$$\left|\psi\right>$$
+，然后利用公式
+
+$$
+E_1=\left<\psi\right|\hat{H}'\left|\psi\right>
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;即可计算得到体系微扰的一阶能量近似
+
+* 对于简并态微扰，可以用矩阵进行表示。设系统有$$n$$个简并的基态
+$$\left|\psi_1\right>$$、
+$$\left|\psi_2\right>$$、
+$$\dotsb$$、
+$$\left|\psi_n\right>$$，
+则可以写出矩阵
+
+$$
+\begin{pmatrix}
+\left<\psi_1\right|\hat{H}'\left|\psi_1\right> & \dotsb & \left<\psi_1\right|\hat{H}'\left|\psi_n\right>\\
+\vdots & \ddots & \vdots\\
+\left<\psi_n\right|\hat{H}'\left|\psi_1\right> & \dotsb & \left<\psi_n\right|\hat{H}'\left|\psi_1\right>
+\end{pmatrix}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将该矩阵对角化（或求出其本征值），则对角元（本征值）就是考虑一阶微扰之后的能量修正项
 
 * 
 
@@ -176,37 +339,35 @@ $$
 
 ---
 
-### <h02 id='2.0'>10.其它一些琐碎的项</h02>
+### <h07 id='7.0'>7.其它一些琐碎的项</h07>
 
 [返回目录](#0.0)
 
-* 
+* 波函数的模的平方为概率，具体计算的时候可以计算波函数与其共轭的波函数乘积并积分得到；若为矩阵表示，需要注意右矢变左矢的时候纵向矩阵要变成横向矩阵，所有的虚数部分要加负号
 
-[返回目录](#0.0)
+* 折合质量
 
----
-
-### <h100 id='10.0'>10.其它一些琐碎的项</h100>
-
-[返回目录](#0.0)
+$$
+\mu=\frac{m_1m_2}{m_1+m_2}
+$$
 
 * 束缚态：在无限远处波函数为零的状态称为束缚态
 
-*  两个自旋为$$\vec{S\ }$$的粒子，其能级可以表示为
+*  两个自旋为$$\vec{S}$$的粒子，其能级可以表示为
 
 $$
-\vec{S_1}\cdot\vec{S_2}=\frac{1}{2}\left[\left(\vec{S_1}+\vec{S_2}\right)^2-\vec{S_1}^2-\vec{S_2}^2\right]
+\vec{S}_1\cdot\vec{S}_2=\frac{1}{2}\left[\left(\vec{S}_1+\vec{S}_2\right)^2-\vec{S}_1^2-\vec{S}_2^2\right]
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$\vec{S_1}+\vec{S_2}$$的值可以取为
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$$\vec{S}_1+\vec{S}_2$$的值可以取为
 
 $$
 S_1+S_2,\ S_1+S_2-1,\ \dotsb,\ \left|S_1-S_2+1\right|,\ \left|S_1-S_2\right|
 $$
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若单个自旋的取值为$$1/2$$，则$$\vec{S_1}+\vec{S_2}$$的取值为$$1$$、$$0$$；
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若单个自旋的取值为$$1/2$$，则$$\vec{S}_1+\vec{S}_2$$的取值为$$1$$、$$0$$；
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若单个自旋的取值为$$1$$，则$$\vec{S_1}+\vec{S_2}$$的取值为$$2$$、$$1$$、$$0$$
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若单个自旋的取值为$$1$$，则$$\vec{S}_1+\vec{S}_2$$的取值为$$2$$、$$1$$、$$0$$
 
 * 相差一个常数的两个算符具有共同的本征态
 
@@ -218,4 +379,26 @@ $$
 \int_0^\infty\mathrm{e}^{-x^2}\mathrm{d}x=\frac{\sqrt{\pi}}{2}
 $$
 
+* 在计算波函数的时候，一定要注意边界条件。常见的边界条件有：
+  * 无穷远处波函数为零
+  * 原点处波函数为有限值
+  * 波函数在势场突变点连续，波函数的导数也连续
+
+* 对易关系
+
+$$
+\left[\hat{x},\hat{H}\right]=\left[\hat{x},\frac{\hat{p}^2}{2m}\right]
+=\left[\hat{x},\frac{\hat{p}}{2m}\right]\hat{p}
+$$
+
+* $$\delta$$函数的积分
+
+$$
+\int f\left(x\right)\delta\left(x-x_0\right)\mathrm{d}x=f\left(x_0\right)
+$$
+
 [返回目录](#0.0)
+
+---
+
+特别感谢CMQ同学的讲解。祝我好运！
