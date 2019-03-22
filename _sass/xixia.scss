@@ -33,6 +33,14 @@ $nav-bar-icon-bar: $main-color;
 $nav-bar-brand-color: #fff;
 $nav-bar-brand-hover-color: $link-color-1;
 
+/* equation */
+.MJXc-display {
+    display: block; 
+    text-align: center;
+    margin: 1em 0;
+    padding: 0;
+    overflow-x: auto;
+}
 
 @import 
     "xixia/theme",
