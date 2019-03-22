@@ -624,8 +624,8 @@ $$
 $$
 \left\{
 \begin{aligned}
-&\vec{B}=\frac{1}{4\pi\varepsilon_0 c^3R}\ddot{\vec{p}}\mathrm{e}^{ikR}\sin\theta\vec{e}_\arphi}\\\\
-&\vec{E}=\frac{1}{4\pi\varepsilon_0 c^2R}\ddot{\vec{p}}\mathrm{e}^{ikR}\sin\theta\vec{e}_\heta}
+&\vec{B}=\frac{1}{4\pi\varepsilon_0 c^3R}\ddot{\vec{p}}\mathrm{e}^{ikR}\sin\theta\vec{e}_\varphi\\\\
+&\vec{E}=\frac{1}{4\pi\varepsilon_0 c^2R}\ddot{\vec{p}}\mathrm{e}^{ikR}\sin\theta\vec{e}_\theta
 \end{aligned}
 \right.
 $$
