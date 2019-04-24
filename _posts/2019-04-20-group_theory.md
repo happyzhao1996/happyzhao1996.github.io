@@ -606,7 +606,7 @@ $$
 
 #### 2.7 正交性定理和完备性定理
 
-* **正交性定理**：设$$n$$阶有限群$$G=\left\{\dotsb,g_k\dotsb\right\}$$有不等价不可约的幺正表示$$A^{\left(p\right)}\left(G\right)$$和$$A^{\left(r\right)}\left(G\right)$$，它们的维数分别为$$S_p$$和$$S_r$$，那么由$$A^{\left(p\right)}\left(G\right)$$产生的$$S_p^2$$个群表示函数$$A_{\mu',\nu'}^{\left(r\right)}\left(g_k\right)$$满足关系
+* **正交性定理**：设$$n$$阶有限群$$G=\left\{\dotsb,g_k,\dotsb\right\}$$有不等价不可约的幺正表示$$A^{\left(p\right)}\left(G\right)$$和$$A^{\left(r\right)}\left(G\right)$$，它们的维数分别为$$S_p$$和$$S_r$$，那么由$$A^{\left(p\right)}\left(G\right)$$产生的$$S_p^2$$个群表示函数$$A_{\mu',\nu'}^{\left(r\right)}\left(g_k\right)$$满足关系
 
 $$
 \langle A_{\mu,\nu}^{\left(p\right)}\left(g_k\right)|A_{\mu',\nu'}^{\left(r\right)}\left(g_k\right)\rangle\equiv\frac{1}{n}\sum_{k=1}^nA_{\mu,\nu}^{\left(p\right)*}\left(g_k\right)A_{\mu',\nu'}^{\left(r\right)}\left(g_k\right)=\frac{1}{S_p}\delta_{pr}\delta_{\mu\mu'}\delta_{\nu\nu'}
@@ -622,10 +622,307 @@ C_{\mu\nu}^{\left(i\right)}=S_p\langle A_{\mu\nu}^{\left(i\right)}|\psi\rangle
 $$
 
 * 有限群$$G$$的所有不等价不可约幺正表示$$A^{\left(i\right)}(i=1,2,\dotsb,q)$$产生的群表示函数集合
+
 $$
 \left\{\sqrt{S_i}A_{\mu\nu}^{\left(i\right)}\left(g_k\right)|i=1,2,\dotsb,q;\mu,\nu=1,2,\dotsb,S_i\right\}
 $$
-是群表示函数空间中的一组正交归一基，空间维数等于$$\sum_{i=1}^qS_i^2$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是群表示函数空间中的一组正交归一基，空间维数等于$$\sum_{i=1}^qS_i^2$$
+
+* **Burnside 定理**：有限群的所有不等价不可约表示的维数平方和等于该群的阶，即$$S_1^2+S_2^2+\dotsb+S_q^2=n$$，其中$$S_i$$的取值为自然数，且至少有一项的取值为1，因为每个群都有一个一维恒等表示
+
+#### 2.8 特征标理论
+
+* **特征标的定义**：设$$A=\left\{A\left(g_\alpha\right)\right\}$$是群$$G=\left\{g_\alpha\right\}$$的一个表示，表示$$A$$的特征标定义为
+
+$$
+\chi^A=\left\{\dotsb,\chi^A\left(g_\alpha\right)=\sum_iA_{ii}\left(a_\alpha\right),\dotsb\right\}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$\chi^A\left(g_\alpha\right)$$为表示矩阵的迹$$\mathrm{Tr}A\left(g_\alpha\right)$$，称为群元素$$g_\alpha$$的特征标
+
+* 特征标$$\chi^A\left(g_\alpha\right)$$是一个群函数（从群到数的映射）
+
+* 对群的某一表示来说，其单位元的特征标就等于该表示的维数
+
+* 等价表示的特征标相等
+
+* 不可约幺正表示的特征标的模等于1
+
+* **特征标的第一正交关系**：不等价的不可约幺正表示的特征标正交，因为
+
+$$
+\langle\chi^{\left(p\right)}|\chi^{\left(r\right)}\rangle=\frac{1}{n}\sum_{k=1}^n\chi^{\left(p\right)}\left(g_k\right)\chi^{\left(r\right)}\left(g_k\right)=\frac{1}{n}\sum_{i,i'}\sum_{k=1}^nA_{ii}^{\left(p\right)*}\left(g_k\right)A_{i'i'}^{\left(r\right)}\left(g_k\right)=0
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;即
+$$
+\langle\chi^{\left(p\right)}|\chi^{\left(r\right)}\rangle=\delta_{pr}
+$$
+
+* 可约表示的特征标等于它所包含的不可约表示的特征标之和
+
+* 特征标相等的表示等价
+
+* 两表示等价的充分必要条件是它们的特征标相等
+
+* 可约表示的特征标的模大于1
+
+* 同类元素的特征标相等
+
+* 称群函数$$f\left(K_i\right)$$是类函数，如果它满足$$f\left(K_i\right)=f\left(g_i\right)$$，其中$$K_i$$是群$$G$$中包含群元素$$g_i$$的类
+
+* 利用类函数的性质，特征标的第一正交关系还可以写为
+
+$$
+\frac{1}{n}\sum_{i=1}^qn_i\chi^{\left(p\right)*}\left(K_i\right)\chi^{\left(r\right)}\left(K_i\right)=\delta_{pr}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$q$$是$$G$$的类的个数，$$n_i$$是第$$i$$个类$$K_i$$包含的元素个数
+
+* **特征标的第二正交关系**：
+
+$$
+\frac{n_i}{n}\sum_{p=1}^q\chi^{\left(p\right)*}\left(K_i\right)\chi^{\left(p\right)}\left(K_{i'}\right)=\delta_{ii'}
+$$
+
+* **完备性定理**：全部不等价不可约幺正表示的特征标集合$$\left\{\chi^{\left(i\right)}\left(K_j\right)\right\}$$在类函数空间上是完备的。该集合可以作为类函数空间的一组基，空间中的任意类函数$$f\left(K_j\right)$$都可以用该组基线性展开，即$$f\left(K_j\right)=\sum_iC_i\chi^{\left(i\right)}\left(K_j\right)$$
+
+* 因为一个不可约表示给出一个类函数，所以全部不等价不可约表示的数目等于类函数的数目。而完备的类函数的数目等于类的数目，于是对于有限群，有：**不等价不可约的表示的数目等于类的数目**
+
+* 特征标的用途：
+  * 判断两个表示是否等价（相等就等价）
+  * 判断一个表示是否可约（可约的特征标模大于1，不可约的特征标正交）
+  * 计算某一表示中包含哪些不可约表示，以及它们出现的次数
+
+* $$D_3$$群的各种不可约表示有：
+  * 一维不可约表示$$A_1$$：$$A_1\left(e\right)=A_1\left(d\right)=A_1\left(f\right)=1$$，$$A_1\left(a\right)=A_1\left(b\right)=A_1\left(c\right)=-1$$
+  * 二维表示$$\Gamma$$为：
+
+$$
+\Gamma\left(e\right)=
+\begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix},
+\Gamma\left(d\right)=
+\begin{pmatrix}
+-\frac{1}{2} & -\frac{\sqrt{3}}{2}\\
+\frac{\sqrt{3}}{2} & -\frac{1}{2}
+\end{pmatrix},
+\Gamma\left(f\right)=
+\begin{pmatrix}
+-\frac{1}{2} & \frac{\sqrt{3}}{2}\\
+-\frac{\sqrt{3}}{2} & -\frac{1}{2}
+\end{pmatrix}
+$$
+
+$$
+\Gamma\left(a\right)=
+\begin{pmatrix}
+-1 & 0\\
+0 & 1
+\end{pmatrix},
+\Gamma\left(b\right)=
+\begin{pmatrix}
+\frac{1}{2} & \frac{\sqrt{3}}{2}\\
+\frac{\sqrt{3}}{2} & \frac{1}{2}
+\end{pmatrix},
+\Gamma\left(c\right)=
+\begin{pmatrix}
+\frac{1}{2} & -\frac{\sqrt{3}}{2}\\
+-\frac{\sqrt{3}}{2} & -\frac{1}{2}
+\end{pmatrix}
+$$
+
+* $$D_3$$群的全部不等价不可约表示的矩阵元与相应的函数值为
+
+$$
+\begin{matrix}
+& &e &d &f &a &b &c\\
+&S &1 &1 &1 &1 &1 &1\\
+&A_1 &1 &1 &1 &-1 &-1 &-1\\
+&\Gamma_{11} &1 &-1/2 &-1/2 &1 &-1/2 &-1/2\\
+&\Gamma_{12} &0 &\sqrt{3}/2 &-\sqrt{3}/2 &0 &\sqrt{3}/2 &-\sqrt{3}/2\\
+&\Gamma_{21} &0 &-\sqrt{3}/2 &\sqrt{3}/2 &0 &\sqrt{3}/2 &-\sqrt{3}/2\\
+&\Gamma_{22} &1 &-1/2 &-1/2 &-1 &1/2 &1/2
+\end{matrix}
+$$
+
+* $$D_3$$群的特征标表为
+
+$$
+\begin{matrix}
+  & K_1=\left\{e\right\} & K_2=\left\{d,f\right\} & K_3=\left\{a,b,c\right\}\\
+\chi^S\left(K_i\right) & 1 & 1 & 1\\
+\chi^{A_1}\left(K_i\right) & 1 & 1 & -1\\
+\chi^{\Gamma}\left(K_i\right) & 2 & -1 & 0
+\end{matrix}
+$$
+
+#### 2.9 正则表示
+
+#### 2.10 群表示的直积
+
+* 设$$A=\left\{A\left(g_i\right)\right\}$$和$$B=\left\{B\left(g_i\right)\right\}$$是群$$G=\left\{g_i\right\}$$的两个表示，那么它们的直积$$A\otimes B=\left\{A\left(g_i\right)\otimes B\left(g_i\right)\right\}$$也是群$$G$$的一个表示
+
+* 两个表示的直积的特征标等于这两个表示的特征标的乘积，即$$\chi^{A\otimes B}=\chi^A\chi^B$$
+
+* 群的两个不可约表示的直积表示一般是可约的。对于有限群来说，其两个不可约表示的直积如果可约则必然完全可约，即可以分解为该群的不可约表示的直和
+
+* 设$$A^{\left(i\right)}$$和$$A^{\left(j\right)}$$是$$n$$阶有限群$$G$$的两个不可约表示，那么有
+
+$$
+A^{\left(i\right)}\left(g\right)\otimes A^{\left(j\right)}\left(g\right)=\sum_k\oplus a_{ijk}A^{\left(k\right)}\left(g\right),\ \ \ g\in G
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这种分解方式称为CG展开，其中$$a_{ijk}$$称为约化系数，是一个非负整数，代表$$A^{\left(k\right)}\left(g\right)$$在直积表示中出现的次数
+
+* 利用这些不可约表示的特征标，可以确定出$$a_{ijk}$$的值，即有
+
+$$
+a_{ijk}=\langle\chi^{\left(k\right)}|\chi^{\left(i\right)\otimes\left(j\right)}\rangle=\frac{1}{n}\sum_{l=1}^n\chi^{\left(k\right)}\left(g_l\right)^*\chi^{\left(i\right)\otimes\left(j\right)}\left(g_l\right)=
+\frac{1}{n}\sum_{l=1}^n\chi^{\left(k\right)}\left(g_l\right)^*\chi^{\left(i\right)}\left(g_l\right)\chi^{\left(j\right)}\left(g_l\right)
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$\chi^{\left(k\right)}$$和$$\chi^{\left(i\right)\otimes\left(j\right)}$$分别是$$A^{\left(k\right)}$$和$$A^{\left(i\right)}\otimes A^{\left(j\right)}$$的特征标。上式也可写为
+
+$$
+a_{ijk}=\frac{1}{n}\sum_{l=1}^qn_l\chi^{\left(k\right)}\left(K_l\right)^*\chi^{\left(i\right)}\left(K_l\right)\chi^{\left(j\right)}\left(K_l\right)
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$n_l$$是类$$K_l$$中的元素的数目
+
+* 在表示空间中，有$$g\Phi_{i\alpha}=\left(g\psi_i\right)\left(g\varphi_\alpha\right)$$
+
+* 荷载不可约表示$$A^{\left(k\right)}$$的基可以由$$\left\{\Phi_{i\alpha}\right\}$$的线性组合给出，即
+
+$$
+\phi_m^{\left(k\right),t}=\sum_{i\alpha}C_{m,i\alpha}^{\left(k\right),t}\Phi_{i\alpha}=\sum_{i\alpha}C_{m,i\alpha}^{\left(k\right),t}\psi_i\varphi_\alpha$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中展开系数$$C_{m,i\alpha}^{\left(k\right),t_k}$$称为群$$G$$的CG系数，$$m=1,2,\dotsb,S_k$$为基分量的标记，$$t_k$$用来区分等价的不可约表示
+
+* $$D_3$$群的三个不可约表示$$S,A,\Gamma$$的直积表示以及约化为
+
+$$
+\begin{aligned}
+&S\otimes A=A\\
+&S\otimes \Gamma=\Gamma\\
+&A\otimes \Gamma=\Gamma\\
+&\Gamma\otimes\Gamma=S\oplus A\oplus\Gamma
+\end{aligned}
+$$
+
+* 任何表示与恒等表示的直积等于该表示
+* 不可约表示与一维表示的直积等于该不可约表示
+
+* 当且仅当两个互为共轭表示的直积表示中才会出现且只出现一次恒等表示
+
+#### 2.11 直积群的表示
+
+* 两个群$$G_1=\left\{g_{1\alpha}\right\}$$和$$G_2=\left\{g_{2\beta}\right\}$$的直积群为$$G=G_1\otimes G_2=\left\{g_{\alpha\beta}\equiv g_{1\alpha}g_{2\beta}\right\}$$，因子群$$G_1$$和$$G_2$$都是$$G$$的不变子群
+
+* 设$$A\left(G_1\right)=\left\{A\left(g_{1\alpha}\right)\right\}$$，$$B\left(G_2\right)=\left\{B\left(g_{2\beta}\right)\right\}$$分别是$$G_1$$和$$G_2$$的表示，那么它们的直积
+
+$$
+C\left(G\right)=A\left(G_1\right)\otimes B\left(G_2\right)=\left\{A\left(g_{1\alpha}\right)\otimes B\left(g_{2\beta}\right)\right\}=\left\{C\left(g_{\alpha\beta}\right)\right\}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;是直积群$$G=G_1\otimes G_2$$的表示（满足保乘关系）
+
+* 直积群的特征标等于其因子群的特征标的乘积，即有
+
+$$
+\chi^{A\otimes B}\left(G\right)=\chi^A\left(G_1\right)\chi^B\left(G_2\right)
+$$
+
+* 如果直积群中的因子群的表示都是不可约的，那么该直积群的表示也是不可约的。如果其中一个因子群的表示是可约的，那么该直积群的表示就是可约的
+* 直积群的类的个数等于其因子群的类的个数之积，所以它的不可约表示的个数等于其因子群的不可约表示的个数之积
+* 直积群的不可约表示完全由其直积因子群的不可约表示决定
+
+* 直积群的任意不可约表示都可以由它的两个因子群的不可约表示的直积构成
+* 直积群的任意表示都可以约化称为一些不可约表示的直和，其中每个表示都是两个因子群的不可约表示的直积
+
+#### 2.12  Dirac群和Clifford代数
+
+* 在相对论量子力学中，4个Dirac矩阵$$\gamma_\mu$$满足关系$$\gamma_\mu\gamma_\nu+\gamma_nu\gamma_\mu=2\delta_{\mu\nu}$$，其中$$\gamma_\mu$$是由2阶单位阵和Pauli矩阵构成的4阶矩阵
+
+* 定义乘法之后，可以由$$\gamma_\mu$$生成32个独立的群元素
+
+$$
+\left\{\pm1,\pm\gamma_\mu,\pm\gamma_\mu\gamma_\nu\left(\mu<\nu\right),\pm\gamma_\mu\gamma_5,\pm\gamma_5\right\}
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中$$\gamma_5=\gamma_1\gamma_2\gamma_3\gamma_4$$，有$$\gamma_5^2=1$$
+
+* 即会构成一个32阶的群，称之为Dirac群$$G_D$$，群元素分为17个类（1+1+4+6+4+1）
+
+* 设$$\gamma_\mu$$矩阵的阶为$$S>1$$，则利用迹的循环性，可以得到$$\gamma_i\left(i=1,2,\dotsb,32\right)$$的特征标满足
+
+$$
+\chi\left(\gamma_i\right)=\left\{
+\begin{aligned}
+&0 &\gamma_i\neq\pm1\\
+&S &\gamma_i=1\\
+&-S &\gamma_i=-1
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;若对$$\gamma_\mu$$所取的矩阵实现使得$$G_D$$的资深表示是不可约的，那么有
+
+$$
+1=\langle\chi|\chi\rangle=\frac{1}{32}\sum_{i=1}^32\chi^*\left(\gamma_i\right)\chi\left(\gamma_i\right)=\frac{1}{32}\left[S^2+\left(-S\right)^2\right]=\frac{1}{16}S^2
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得到$$S=4$$，即$$\gamma_\mu$$的不可约表示矩阵的阶为4，$$G_D$$有16个1维不可约表示和1个4维不可约表示
+
+* 假设$$\gamma_4$$是对角阵，考虑到$$\gamma_4^2=1$$，$$\mathrm{Tr}\gamma_4=0$$，设
+$$
+\gamma_4=
+\begin{pmatrix}
+I & 0\\
+0 & -I
+\end{pmatrix}$$，而$$\gamma_1$$、$$\gamma_2$$、$$\gamma_3$$应当满足
+$$
+\gamma_i=
+\begin{pmatrix}
+0 & N_i\\
+N_i^\dagger & 0
+\end{pmatrix}
+$$，其中$$N_i^\dagger N_j+N_j^\dagger N_i=2\delta_{ij}I$$。因此可以取Pauli矩阵$$N_i=\sigma_i,\left(i=1,2,3\right)$$作为一组特解，求出$$\gamma_1$$、$$\gamma_2$$、$$\gamma_3$$的矩阵形式为
+$$
+\gamma_i=
+\begin{pmatrix}
+0 & \sigma_i\\
+\sigma_i & 0
+\end{pmatrix}
+$$
+
+* Clifford代数：满足结构$$\gamma_\mu\gamma_\nu+\gamma_\nu\gamma_\mu=2\eta_{\mu\nu}$$的结构的代数，其中$$\mu,\nu=1,2,\dotsb$$，$$p+q\equiv N$$，且
+
+$$
+\eta_{\mu\nu}=\left\{
+\begin{aligned}
+&0 &\mu\neq\nu\\
+&1 &\mu=\nu=1,2,\dotsb,p\\
+&-1 &\mu=\nu=p+1,p+2,\dotsb,p+q
+\end{aligned}
+\right.
+$$
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;记此代数为$$C\left(p,q\right)$$，显然$$C\left(4,0\right)$$就是Dirac代数
+
+#### 2.13 广义投影算符
+
+* 一个$$S_p$$维的不可约表示可以构造出$$S_p^2$$个广义投影算符，所以$$n$$阶有限群$$G$$一共有$$n$$个广义投影算符
+$$
+\left\{P_{mn}^{\left(i\right)}|i=1,2,\dotsb,q;m,n=1,2,\dotsb,S_i\right\}
+$$，其中$$q$$为类的个数
+
+* 两个广义投影算符$$P_{kl}^{\left(p\right)}$$和$$P_{st}^{\left(r\right)}$$满足乘法规则$$P_{kl}^{\left(p\right)}P_{st}^{\left(r\right)}=\delta_{pr}\delta_{ls}P_{kt}^{\left(p\right)}$$
+
+* 如果已经知道荷载$$S_p$$维不可约表示$$A^{\left(p\right)}$$的某一个基分量，那么可以利用$$P_{kl}^{\left(p\right)}$$将其与$$S_p-1$$个基分量找出来
 
 [返回目录](#0.0)
 
