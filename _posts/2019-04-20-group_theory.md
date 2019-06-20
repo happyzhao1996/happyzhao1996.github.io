@@ -1001,4 +1001,4 @@ $$
 
 * 可以类似地定义出$$2n$$维酉辛群
 
-* 辛群$${\rm Sp}(2n,{\Bbb C})$$的阶为
+* 辛群$${\rm Sp}(2n,{\Bbb C})$$的阶为$$n(2n+1)$$ @[Wolfram MathWorld](http://mathworld.wolfram.com/SymplecticGroup.html)
